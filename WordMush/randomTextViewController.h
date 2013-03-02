@@ -1,5 +1,5 @@
 //
-//  wordMushViewController.h
+//  randomTextViewController.h
 //  WordMush
 //
 //  Created by Sam Bodanis on 27/01/2013.
@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "randomTextViewController.h"
 
-@interface wordMushViewController : UIViewController
+@interface randomTextViewController : UIViewController
+@property (nonatomic, strong) NSString *bookN;
 
 @end
