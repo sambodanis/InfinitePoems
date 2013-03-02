@@ -28,7 +28,7 @@
     }
 }
 - (IBAction)testCoreData {
-    NSLog(@"Testing Core Data %@", self.allBooks.runTests);
+    NSLog(@"Testing Bundle %@", self.allBooks.runTests);
 }
 
 - (IBAction)tomSawyer:(UIButton *)sender {

@@ -22,6 +22,7 @@
 		6667792F16B5794700A32731 /* randomTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6667792E16B5794700A32731 /* randomTextViewController.m */; };
 		6667793A16B5834F00A32731 /* randomiserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6667793916B5834F00A32731 /* randomiserModel.m */; };
 		6667B15816E2563300EA782B /* bookDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6667B15716E2563300EA782B /* bookDatabase.m */; };
+		6667B16216E264AC00EA782B /* allBooksBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6667B16116E264AC00EA782B /* allBooksBundle.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		6667793916B5834F00A32731 /* randomiserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = randomiserModel.m; path = ../randomiserModel.m; sourceTree = "<group>"; };
 		6667B15616E2563200EA782B /* bookDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bookDatabase.h; sourceTree = "<group>"; };
 		6667B15716E2563300EA782B /* bookDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bookDatabase.m; sourceTree = "<group>"; };
+		6667B16116E264AC00EA782B /* allBooksBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = allBooksBundle.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		6667790E16B5737500A32731 /* WordMush */ = {
 			isa = PBXGroup;
 			children = (
+				6667B16116E264AC00EA782B /* allBooksBundle.bundle */,
 				6667791716B5737500A32731 /* wordMushAppDelegate.h */,
 				6667791816B5737500A32731 /* wordMushAppDelegate.m */,
 				6667792016B5737500A32731 /* MainStoryboard.storyboard */,
@@ -183,6 +186,7 @@
 				6667791F16B5737500A32731 /* Default-568h@2x.png in Resources */,
 				6667792216B5737500A32731 /* MainStoryboard.storyboard in Resources */,
 				6667792C16B5749100A32731 /* TomSawyer.txt in Resources */,
+				6667B16216E264AC00EA782B /* allBooksBundle.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
