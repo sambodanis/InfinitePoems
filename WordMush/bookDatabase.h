@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface bookDatabase : NSObject
+@interface bookDatabase : NSObject 
 
 - (NSString *)runTests;
 
-+ (NSArray *)getAuthorList;
-+ (NSString *)getBook:(NSString *)forAuthor;
+- (NSArray *)getAuthorList;
+- (NSString *)getBook:(NSString *)forAuthor;
 
 @end

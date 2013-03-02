@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "randomTextViewController.h"
 
-@interface wordMushViewController : UIViewController
+@interface wordMushViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
 @end

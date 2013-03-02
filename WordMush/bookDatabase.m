@@ -10,8 +10,8 @@
 
 @interface bookDatabase()
 
-@property (nonatomic, strong) NSArray *authorList;
-@property (nonatomic, strong) NSBundle *bookBundle;
+@property (nonatomic, strong) NSMutableArray *authorList;
+
 
 @end
 
@@ -19,39 +19,50 @@
 @implementation bookDatabase
 
 @synthesize authorList = _authorList;
-@synthesize bookBundle = _bookBundle;
 
-- (NSBundle *)bookBundle {
-    if (!_bookBundle) {
-        _bookBundle = [[NSBundle alloc] initWithPath:@"allBooksBundle.bundle"];
+- (NSMutableArray *)authorList {
+    if (!_authorList) {
+        _authorList = [[NSMutableArray alloc] init];
     }
-    return _bookBundle;
+    return _authorList;
 }
 
 - (NSString *)runTests {
-    NSString *hamletPath = [self.bookBundle pathForResource:@"Hamlet" ofType:@".txt"];
-    return hamletPath;
-//    NSLog(@"Path: %@", hamletPath);
-//    NSData *sawyerData = [NSData dataWithContentsOfFile:@"allBooksBundle.bundle/TomSawyer.txt"];
-//    return [[NSString alloc] initWithData:sawyerData encoding:NSASCIIStringEncoding];
     
-    
-//    return @"Tests good";
-}
-
-
-+ (NSArray *)getAuthorList {
- 
-    
+//    NSArray *textFiles = [[NSBundle mainBundle] pathsForResourcesOfType:@".txt" inDirectory:@"./"];
     return NULL;
 }
 
 
-+ (NSString *)getBook:(NSString *)forAuthor {
+// Returns a list of all authors in app directory
+// addThisOne is because of a Strange issue with two
+// copies of every txt file, these skips every other
+// file to avoid duplicate entries.
+- (NSArray *)getAuthorList {
+    NSArray *textFiles = [[NSBundle mainBundle] pathsForResourcesOfType:@".txt" inDirectory:@"./"];
+    BOOL addThisOne = TRUE;
+    for (NSString *filename in textFiles) {
+        if (!addThisOne) {
+            addThisOne = TRUE;
+            continue;
+        }
+        int beginningOfName = [filename length] - 1;
+        while ([filename characterAtIndex:beginningOfName--] != '/');
+        NSString *authorName = @"";
+        for (int i = beginningOfName + 2; i < [filename length] - 4; i++) {
+            authorName = [authorName stringByAppendingFormat:@"%c", [filename characterAtIndex:i]];
+        }
+//        NSLog(@"%@", authorName);
+        [self.authorList addObject:authorName];
+        addThisOne = FALSE;
+    }
     
-    
-    
-    return NULL;
+    return self.authorList;
+}
+
+
+- (NSString *)getBook:(NSString *)forAuthor {
+    return [[NSBundle mainBundle] pathForResource:forAuthor ofType:@".txt"];
 }
 
 

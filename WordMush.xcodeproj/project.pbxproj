@@ -18,11 +18,11 @@
 		6667791F16B5737500A32731 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6667791E16B5737500A32731 /* Default-568h@2x.png */; };
 		6667792216B5737500A32731 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6667792016B5737500A32731 /* MainStoryboard.storyboard */; };
 		6667792516B5737500A32731 /* wordMushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6667792416B5737500A32731 /* wordMushViewController.m */; };
-		6667792C16B5749100A32731 /* TomSawyer.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6667792B16B5749100A32731 /* TomSawyer.txt */; };
+		6667792C16B5749100A32731 /* Tom Sawyer.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6667792B16B5749100A32731 /* Tom Sawyer.txt */; };
 		6667792F16B5794700A32731 /* randomTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6667792E16B5794700A32731 /* randomTextViewController.m */; };
 		6667793A16B5834F00A32731 /* randomiserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6667793916B5834F00A32731 /* randomiserModel.m */; };
 		6667B15816E2563300EA782B /* bookDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6667B15716E2563300EA782B /* bookDatabase.m */; };
-		6667B16216E264AC00EA782B /* allBooksBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6667B16116E264AC00EA782B /* allBooksBundle.bundle */; };
+		6667B16416E26B3E00EA782B /* Emily Dickinson.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6667B16316E26B3E00EA782B /* Emily Dickinson.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,14 +42,14 @@
 		6667792116B5737500A32731 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		6667792316B5737500A32731 /* wordMushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wordMushViewController.h; sourceTree = "<group>"; };
 		6667792416B5737500A32731 /* wordMushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wordMushViewController.m; sourceTree = "<group>"; };
-		6667792B16B5749100A32731 /* TomSawyer.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TomSawyer.txt; sourceTree = "<group>"; };
+		6667792B16B5749100A32731 /* Tom Sawyer.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Tom Sawyer.txt"; sourceTree = "<group>"; };
 		6667792D16B5794700A32731 /* randomTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randomTextViewController.h; sourceTree = "<group>"; };
 		6667792E16B5794700A32731 /* randomTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = randomTextViewController.m; sourceTree = "<group>"; };
 		6667793816B5834F00A32731 /* randomiserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = randomiserModel.h; path = ../randomiserModel.h; sourceTree = "<group>"; };
 		6667793916B5834F00A32731 /* randomiserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = randomiserModel.m; path = ../randomiserModel.m; sourceTree = "<group>"; };
 		6667B15616E2563200EA782B /* bookDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bookDatabase.h; sourceTree = "<group>"; };
 		6667B15716E2563300EA782B /* bookDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bookDatabase.m; sourceTree = "<group>"; };
-		6667B16116E264AC00EA782B /* allBooksBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = allBooksBundle.bundle; sourceTree = "<group>"; };
+		6667B16316E26B3E00EA782B /* Emily Dickinson.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Emily Dickinson.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,6 @@
 		6667790E16B5737500A32731 /* WordMush */ = {
 			isa = PBXGroup;
 			children = (
-				6667B16116E264AC00EA782B /* allBooksBundle.bundle */,
 				6667791716B5737500A32731 /* wordMushAppDelegate.h */,
 				6667791816B5737500A32731 /* wordMushAppDelegate.m */,
 				6667792016B5737500A32731 /* MainStoryboard.storyboard */,
@@ -108,7 +107,8 @@
 				6667792416B5737500A32731 /* wordMushViewController.m */,
 				6667793816B5834F00A32731 /* randomiserModel.h */,
 				6667793916B5834F00A32731 /* randomiserModel.m */,
-				6667792B16B5749100A32731 /* TomSawyer.txt */,
+				6667B16316E26B3E00EA782B /* Emily Dickinson.txt */,
+				6667792B16B5749100A32731 /* Tom Sawyer.txt */,
 				6667790F16B5737500A32731 /* Supporting Files */,
 			);
 			path = WordMush;
@@ -185,8 +185,8 @@
 				6667791D16B5737500A32731 /* Default@2x.png in Resources */,
 				6667791F16B5737500A32731 /* Default-568h@2x.png in Resources */,
 				6667792216B5737500A32731 /* MainStoryboard.storyboard in Resources */,
-				6667792C16B5749100A32731 /* TomSawyer.txt in Resources */,
-				6667B16216E264AC00EA782B /* allBooksBundle.bundle in Resources */,
+				6667792C16B5749100A32731 /* Tom Sawyer.txt in Resources */,
+				6667B16416E26B3E00EA782B /* Emily Dickinson.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
