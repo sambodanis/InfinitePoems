@@ -9,7 +9,6 @@
 #import "randomiserModel.h"
 
 #define MAX_BOOK_LENGTH 1000
-#define TEMP_MARKOV_LENGTH 8
 
 @interface randomiserModel()
 @property (nonatomic, strong) NSMutableDictionary *stringsAndSubStrings;
@@ -26,6 +25,10 @@
     return _stringsAndSubStrings;
 }
 
+// 1st degree markov model generation
+// For each word in the input book
+// find all following words
+// record in map(word -> array of all following words)
 - (void)analyseFrequenciesFromBook:(NSString *)book {
     int i = 0;
     NSString *nextWord = @"";
@@ -34,10 +37,12 @@
     }
     i += [nextWord length] + 1;
     while (true) {
+
         NSString *currWord = nextWord;
         nextWord = @"";
         NSMutableArray *nextWords = [self.stringsAndSubStrings objectForKey:currWord];
         for (int j = i; [book characterAtIndex:j] != ' '; j++) { // take away second condition
+            if (j + 1 >= [book length]) break;
             nextWord = [nextWord stringByAppendingFormat:@"%c", [book characterAtIndex:j]];
         }
         if (nextWords) {
@@ -48,10 +53,16 @@
         [self.stringsAndSubStrings setObject:nextWords forKey:currWord];
 
         i += [nextWord length] + 1;
-        if (i + 4 * [nextWord length] >= [book length]) break;
+        if (i + 4 * [nextWord length] >= [book length]) {
+            break;
+        }
     }
 }
 
+// Starting from a seed, repeatdly query the map to find all
+// words following the current seed. Randomly select one of these
+// following words and append it to the random text, this following
+// word is now the new seed. 
 - (NSString *)writeRandomText:(NSString *)seed {
     NSString *result = seed;
     NSString *currentWord = result;
@@ -65,6 +76,8 @@
     return result;
 }
 
+// Splits the random text file up into paragraph blocks.
+// Randomly chooses one to return.
 - (NSString *)extractPoemBlock:(NSString *)randomText {
     NSMutableArray *paragraphs = [[NSMutableArray alloc] init];
     NSString *currentString = @"";
@@ -85,20 +98,18 @@
     return [paragraphs objectAtIndex:randNum];
 }
 
+// Determine seed and return a random paragraph. 
 - (NSString *)getRandomTextFromInput:(NSString *)inputBook {
-    // Maybe at this point query NSData to get the specified book.
     [self analyseFrequenciesFromBook:inputBook];
     NSString *seed = @"";
     int maxOccurences = 0;
     for (NSString *key in self.stringsAndSubStrings) {
         int currOccurences = [[self.stringsAndSubStrings objectForKey:key] count];
         if (currOccurences > maxOccurences) seed = key;
-//        NSLog(@"%@ : %@", key, [self.stringsAndSubStrings objectForKey:key]);
     }
     
     NSString *singlePoemBlock = [self extractPoemBlock:[self writeRandomText:seed]];
     return singlePoemBlock;
-//    return [self writeRandomText:seed];
 }
 
 @end
