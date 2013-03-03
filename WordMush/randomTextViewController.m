@@ -48,7 +48,7 @@
         
         mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
         
-        [mySLComposerSheet setInitialText:[@"Check out this great poem I made with PoemMush\n" stringByAppendingString:self.randomTextView.text]];
+        [mySLComposerSheet setInitialText:[@"Check out this great poem I made with WordMush\n" stringByAppendingString:self.randomTextView.text]];
         
         //        [mySLComposerSheet addImage:[UIImage imageNamed:@"action-location.png" ]];
         
@@ -56,7 +56,7 @@
         
     }
     
-    [mySLComposerSheet setCompletionHandler:^(SLComposeViewControllerResult result) {
+        [mySLComposerSheet setCompletionHandler:^(SLComposeViewControllerResult result) {
         
         NSString *output = [[NSString alloc] init];
         
