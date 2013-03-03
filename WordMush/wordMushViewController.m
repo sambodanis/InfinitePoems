@@ -12,9 +12,16 @@
 @interface wordMushViewController() 
 
 @property (nonatomic, strong) NSString *book;
+
 @property (strong, nonatomic) IBOutlet UIPickerView *bookListPicker;
+
 @property (nonatomic, strong) bookDatabase *allBooks;
+
 @property (nonatomic, strong) NSArray *listOfAuthors;
+
+@property (strong, nonatomic) IBOutlet UIButton *CreatePoemButton;
+
+@property (nonatomic, strong) NSString *selectedAuthor;
 @end
 
 @implementation wordMushViewController
@@ -22,6 +29,7 @@
 @synthesize allBooks = _allBooks;
 @synthesize bookListPicker = _bookListPicker;
 @synthesize listOfAuthors = _listOfAuthors;
+@synthesize selectedAuthor = _selectedAuthor;
 
 - (NSArray *)listOfAuthors {
     if (!_listOfAuthors) {
@@ -30,12 +38,13 @@
     return _listOfAuthors;
 }
 
-//- (UIPickerView *)bookListPicker {
-//    if (!_bookListPicker) {
-//        _bookListPicker = [[UIPickerView alloc] init];
-//    }
-//    return _bookListPicker;
-//}
+- (NSString *)selectedAuthor {
+    if (!_selectedAuthor) {
+        _selectedAuthor = [[NSString alloc] init];
+//        _selectedAuthor = [self.listOfAuthors objectAtIndex:0];
+    }
+    return _selectedAuthor;
+}
 
 - (bookDatabase *)allBooks {
     if (!_allBooks) {
@@ -55,27 +64,30 @@
 }
 
 - (IBAction)testCoreData {
-    NSArray *authors = [self.allBooks getAuthorList];
-//    NSLog(@"%@", [authors objectAtIndex:0]);
-    for (NSString *author in authors) {
-//        NSLog(@"t %@", author);
-    }
-    NSLog(@"%@", [self.allBooks getBook:authors[0]]);
-    NSData *ascii = [NSData dataWithContentsOfFile:[self.allBooks getBook:authors[0]]];
-    self.book = [[NSString alloc] initWithData:ascii encoding:NSASCIIStringEncoding];
-    NSLog(@"%@", self.book);
+//    NSArray *authors = [self.allBooks getAuthorList];
+////    NSLog(@"%@", [authors objectAtIndex:0]);
+//    for (NSString *author in authors) {
+////        NSLog(@"t %@", author);
+//    }
+//    NSLog(@"%@", [self.allBooks getBook:authors[0]]);
+//    NSData *ascii = [NSData dataWithContentsOfFile:[self.allBooks getBook:authors[0]]];
+//    self.book = [[NSString alloc] initWithData:ascii encoding:NSASCIIStringEncoding];
+//    NSLog(@"%@", self.book);
 }
-
-- (IBAction)tomSawyer:(UIButton *)sender {
-    NSData *ascii = [NSData dataWithContentsOfFile:@"/Users/sambodanis/Dropbox/WordMush/WordMush/Hamlet.txt"];
-    self.book = [[NSString alloc] initWithData:ascii encoding:NSASCIIStringEncoding];
-    NSLog(@"%@", self.book);
+- (IBAction)CreatePoemFromAuthor:(UIButton *)sender {
+    
+//    NSData *ascii = [NSData dataWithContentsOfFile:@"/Users/sambodanis/Dropbox/WordMush/WordMush/Hamlet.txt"];
+    self.book = [self.allBooks getBook:self.selectedAuthor];
+//    NSLog(@"%@", self.book);
+//    self.book = [[NSString alloc] initWithData:ascii encoding:NSASCIIStringEncoding];
+//    NSLog(@"%@", self.book);
     [self performSegueWithIdentifier:@"bdrSegue" sender:self];
 }
 
+
 #pragma pickerViewMethods
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return [[self.allBooks getAuthorList] count];
+    return [self.listOfAuthors count];
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
@@ -85,9 +97,14 @@
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return [self.listOfAuthors objectAtIndex:row];
 }
+
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    self.selectedAuthor = [self.listOfAuthors objectAtIndex:row];
+    [self.CreatePoemButton setTitle:self.selectedAuthor forState:UIControlStateNormal];
+    NSLog(@"%d, %@", row, self.selectedAuthor);
     [pickerView selectRow:row inComponent:0 animated:YES];
 }
+
 
 - (void)viewDidLoad
 {
@@ -96,6 +113,8 @@
     self.bookListPicker = [[UIPickerView alloc] init];
     self.bookListPicker.delegate = self;
     self.bookListPicker.dataSource = self;
+    self.selectedAuthor = [self.listOfAuthors objectAtIndex:0];
+    [self.CreatePoemButton setTitle:self.selectedAuthor forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning

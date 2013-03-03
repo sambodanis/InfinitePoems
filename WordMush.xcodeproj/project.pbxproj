@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		662DBAEB16E2E126004A52F1 /* Edgar Allen Poe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 662DBAEA16E2E126004A52F1 /* Edgar Allen Poe.txt */; };
 		6667790916B5737500A32731 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6667790816B5737500A32731 /* UIKit.framework */; };
 		6667790B16B5737500A32731 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6667790A16B5737500A32731 /* Foundation.framework */; };
 		6667790D16B5737500A32731 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6667790C16B5737500A32731 /* CoreGraphics.framework */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		662DBAEA16E2E126004A52F1 /* Edgar Allen Poe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Edgar Allen Poe.txt"; sourceTree = "<group>"; };
 		6667790416B5737500A32731 /* WordMush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordMush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6667790816B5737500A32731 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6667790A16B5737500A32731 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,6 +111,7 @@
 				6667793916B5834F00A32731 /* randomiserModel.m */,
 				6667B16316E26B3E00EA782B /* Emily Dickinson.txt */,
 				6667792B16B5749100A32731 /* Tom Sawyer.txt */,
+				662DBAEA16E2E126004A52F1 /* Edgar Allen Poe.txt */,
 				6667790F16B5737500A32731 /* Supporting Files */,
 			);
 			path = WordMush;
@@ -187,6 +190,7 @@
 				6667792216B5737500A32731 /* MainStoryboard.storyboard in Resources */,
 				6667792C16B5749100A32731 /* Tom Sawyer.txt in Resources */,
 				6667B16416E26B3E00EA782B /* Emily Dickinson.txt in Resources */,
+				662DBAEB16E2E126004A52F1 /* Edgar Allen Poe.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

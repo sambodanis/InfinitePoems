@@ -37,7 +37,7 @@
         NSString *currWord = nextWord;
         nextWord = @"";
         NSMutableArray *nextWords = [self.stringsAndSubStrings objectForKey:currWord];
-        for (int j = i; [book characterAtIndex:j] != ' '; j++) {
+        for (int j = i; [book characterAtIndex:j] != ' '; j++) { // take away second condition
             nextWord = [nextWord stringByAppendingFormat:@"%c", [book characterAtIndex:j]];
         }
         if (nextWords) {
@@ -49,35 +49,40 @@
 
         i += [nextWord length] + 1;
         if (i + 4 * [nextWord length] >= [book length]) break;
-//        NSLog(@"%@ -> %@", currWord, nextWord);
     }
 }
 
 - (NSString *)writeRandomText:(NSString *)seed {
     NSString *result = seed;
     NSString *currentWord = result;
-
+    
     for (int i = 0; i < MAX_BOOK_LENGTH; i++) {
-//        NSString *tempWord = currentWord;
         NSMutableArray *possibleNextWords = [self.stringsAndSubStrings objectForKey:currentWord];
         currentWord = [possibleNextWords objectAtIndex:(arc4random() % [possibleNextWords count])];
         result = [result stringByAppendingFormat:@"%@ ", currentWord];
+        
     }
-    
-    
-//    for (int i = 0; i < MAX_BOOK_LENGTH - TEMP_MARKOV_LENGTH; i++) {
-//        NSString *currSubString = @"";
-//        for (int j = i; j < i + TEMP_MARKOV_LENGTH; j++) {
-//            currSubString = [currSubString stringByAppendingFormat:@"%c", [result characterAtIndex:j]];
-//        }
-//        NSString *nextChar = [self.stringsAndSubStrings objectForKey:currSubString];
-//        int nextIndex = arc4random() % [nextChar length];
-//        nextChar = [NSString stringWithFormat:@"%c", [nextChar characterAtIndex:nextIndex]];
-//        result = [result stringByAppendingString:nextChar];
-//    }
-    NSLog(@"%@", result);
-    NSLog(@"%u", [self.stringsAndSubStrings count]);
     return result;
+}
+
+- (NSString *)extractPoemBlock:(NSString *)randomText {
+    NSMutableArray *paragraphs = [[NSMutableArray alloc] init];
+    NSString *currentString = @"";
+    for (int i = 0; i < [randomText length]; i++) {
+        if ([randomText characterAtIndex:i] == '\n' && [randomText characterAtIndex:i + 1] == '\n') {
+            [paragraphs addObject:currentString];
+            currentString = @"";
+            i += 1;
+        }
+        currentString = [currentString stringByAppendingFormat:@"%c", [randomText characterAtIndex:i]];
+    }
+    for (NSString *para in paragraphs) {
+        NSLog(@"%@", para);
+    }
+    NSLog(@"%d", [paragraphs count]);
+    int randNum = rand() % ([paragraphs count] - 1);
+
+    return [paragraphs objectAtIndex:randNum];
 }
 
 - (NSString *)getRandomTextFromInput:(NSString *)inputBook {
@@ -90,7 +95,10 @@
         if (currOccurences > maxOccurences) seed = key;
 //        NSLog(@"%@ : %@", key, [self.stringsAndSubStrings objectForKey:key]);
     }
-    return [self writeRandomText:seed];
+    
+    NSString *singlePoemBlock = [self extractPoemBlock:[self writeRandomText:seed]];
+    return singlePoemBlock;
+//    return [self writeRandomText:seed];
 }
 
 @end

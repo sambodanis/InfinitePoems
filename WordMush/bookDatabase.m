@@ -62,7 +62,10 @@
 
 
 - (NSString *)getBook:(NSString *)forAuthor {
-    return [[NSBundle mainBundle] pathForResource:forAuthor ofType:@".txt"];
+    NSData *ascii = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:forAuthor ofType:@".txt"]];
+//    return [[NSString alloc] initWithData:ascii encoding:NSASCIIStringEncoding];
+    return [[NSString alloc] initWithData:ascii encoding:NSASCIIStringEncoding];
+
 }
 
 

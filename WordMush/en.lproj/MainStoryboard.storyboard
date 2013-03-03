@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tky-Co-llc">
-                                <rect key="frame" x="104" y="314" width="113" height="44"/>
+                                <rect key="frame" x="64" y="314" width="192" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Tom Sawyer">
@@ -24,7 +24,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="tomSawyer:" destination="2" eventType="touchUpInside" id="AmJ-Hp-Poo"/>
+                                    <action selector="CreatePoemFromAuthor:" destination="2" eventType="touchUpInside" id="HtH-kw-hiE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ExW-LD-wzK">
@@ -55,6 +55,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gwi-FP-TLK"/>
                     <connections>
+                        <outlet property="CreatePoemButton" destination="Tky-Co-llc" id="2VR-77-gc8"/>
                         <outlet property="bookListPicker" destination="ugk-Ex-gwo" id="aDw-R7-phn"/>
                         <segue destination="YdX-GT-Jvc" kind="push" identifier="bdrSegue" id="042-4B-ZwQ"/>
                     </connections>
@@ -119,6 +120,7 @@
         <class className="wordMushViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/wordMushViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="CreatePoemButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="bookListPicker" candidateClass="UIPickerView"/>
             </relationships>
         </class>
