@@ -25,21 +25,7 @@
                                 </state>
                                 <connections>
                                     <action selector="CreatePoemFromAuthor:" destination="2" eventType="touchUpInside" id="HtH-kw-hiE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ExW-LD-wzK">
-                                <rect key="frame" x="95" y="302" width="130" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Test Core Data">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="testCoreData" destination="2" eventType="touchUpInside" id="lMs-Cr-oCB"/>
+                                    <segue destination="YdX-GT-Jvc" kind="push" identifier="bdrSegue" id="8H9-yS-TJO"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" restorationIdentifier="" id="ugk-Ex-gwo">
@@ -51,7 +37,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jup-Ew-r3N">
-                                <rect key="frame" x="20" y="224" width="139" height="44"/>
+                                <rect key="frame" x="20" y="302" width="139" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button">
@@ -67,7 +53,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FaH-a4-0uL">
-                                <rect key="frame" x="161" y="224" width="139" height="44"/>
+                                <rect key="frame" x="161" y="302" width="139" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button">
@@ -79,24 +65,57 @@
                                 </state>
                                 <connections>
                                     <action selector="createPoemFromRightAuthor:" destination="2" eventType="touchUpInside" id="R9u-cg-5om"/>
-                                    <segue destination="YdX-GT-Jvc" kind="push" identifier="rightSegue" id="mVU-3I-YQi"/>
+                                    <segue destination="YdX-GT-Jvc" kind="push" identifier="rightSegue" id="AEl-B7-oCD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Press the button corresponding to the poet who's work you would like to generate random poetry from:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="di2-ty-yyV">
+                                <rect key="frame" x="20" y="219" width="282" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="gwi-FP-TLK"/>
+                    <navigationItem key="navigationItem" id="gwi-FP-TLK">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="Muz-TI-MgY">
+                            <connections>
+                                <segue destination="ddc-xw-0cb" kind="push" id="8hl-i6-6ci"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="CreatePoemButton" destination="Tky-Co-llc" id="2VR-77-gc8"/>
                         <outlet property="bookListPicker" destination="ugk-Ex-gwo" id="aDw-R7-phn"/>
                         <outlet property="leftPoemButton" destination="jup-Ew-r3N" id="p3Z-G6-Ao7"/>
                         <outlet property="rightPoemButton" destination="FaH-a4-0uL" id="o6K-z7-51s"/>
-                        <segue destination="YdX-GT-Jvc" kind="push" identifier="bdrSegue" id="042-4B-ZwQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="657" y="76"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nye-1v-hfj">
+            <objects>
+                <viewController id="ddc-xw-0cb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qBT-dl-Ttb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="splashScreen.png" id="8jj-U2-sjI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tdg-1Q-TzU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWM-9J-wEr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1288" y="251"/>
         </scene>
         <!--Random Text View Controller-->
         <scene sceneID="6rs-6f-Gc4">
@@ -106,37 +125,48 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="xvY-A5-rKa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="paperBackground.jpg" id="Ns0-Ml-sSw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" id="xvY-A5-rKa">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.019337152853978346" green="0.056764316063170395" blue="0.24165675951086951" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="u5Y-Fp-K61"/>
+                    <navigationItem key="navigationItem" id="u5Y-Fp-K61">
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="MjG-g1-0G6">
+                            <connections>
+                                <action selector="postToFacebook:" destination="YdX-GT-Jvc" id="dRc-8A-NK9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="randomTextView" destination="xvY-A5-rKa" id="haV-mg-gLi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PEg-uH-xDC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1065" y="78"/>
+            <point key="canvasLocation" x="1154" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dh6-uu-jyy">
             <objects>
                 <navigationController id="R0R-2I-jdJ" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="1Jc-fD-1Ze"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gVx-j3-CVN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="rootViewController" id="Yhq-Zs-ADc"/>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="7LV-pj-0ue"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Yk-fC-iWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -144,10 +174,15 @@
             <point key="canvasLocation" x="235" y="76"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="paperBackground.jpg" width="4000" height="3070"/>
+        <image name="splashScreen.png" width="745" height="1053"/>
+    </resources>
     <classes>
         <class className="randomTextViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/randomTextViewController.h"/>
             <relationships>
+                <relationship kind="action" name="postToFacebook:"/>
                 <relationship kind="outlet" name="randomTextView" candidateClass="UITextView"/>
             </relationships>
         </class>
@@ -170,6 +205,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="mVU-3I-YQi"/>
+        <segue reference="BDL-7i-Sae"/>
     </inferredMetricsTieBreakers>
 </document>

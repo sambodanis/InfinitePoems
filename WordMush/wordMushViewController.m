@@ -73,50 +73,34 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"bdrSegue"]) {
-        BOOL specialSpacingOne = [self.selectedAuthorOne isEqualToString:@"Robert Frost"];
+        BOOL specialSpacing = [self.selectedAuthorOne isEqualToString:@"Robert Frost"] || [self.selectedAuthorTwo isEqualToString:@"Robert Frost"];
         [segue.destinationViewController setBookN:self.book];
-        [segue.destinationViewController setSpecialSpacing:specialSpacingOne];
+        [segue.destinationViewController setSpecialSpacing:specialSpacing];
     } else if ([segue.identifier isEqualToString:@"leftSegue"]) {
-        BOOL specialSpacingOne = [self.selectedAuthorOne isEqualToString:@"Robert Frost"];
+        BOOL specialSpacing = [self.selectedAuthorOne isEqualToString:@"Robert Frost"];
         [segue.destinationViewController setBookN:self.book];
-        [segue.destinationViewController setSpecialSpacing:specialSpacingOne];
+        [segue.destinationViewController setSpecialSpacing:specialSpacing];
     } else if ([segue.identifier isEqualToString:@"rightSegue"]) {
-        BOOL specialSpacingOne = [self.selectedAuthorTwo isEqualToString:@"Robert Frost"];
+        BOOL specialSpacing = [self.selectedAuthorTwo isEqualToString:@"Robert Frost"];
         [segue.destinationViewController setBookN:self.book];
-        [segue.destinationViewController setSpecialSpacing:specialSpacingOne];
+        [segue.destinationViewController setSpecialSpacing:specialSpacing];
 
     }
 }
 
-- (IBAction)testCoreData {
-//    NSArray *authors = [self.allBooks getAuthorList];
-////    NSLog(@"%@", [authors objectAtIndex:0]);
-//    for (NSString *author in authors) {
-////        NSLog(@"t %@", author);
-//    }
-//    NSLog(@"%@", [self.allBooks getBook:authors[0]]);
-//    NSData *ascii = [NSData dataWithContentsOfFile:[self.allBooks getBook:authors[0]]];
-//    self.book = [[NSString alloc] initWithData:ascii encoding:NSASCIIStringEncoding];
-//    NSLog(@"%@", self.book);
-}
+
 - (IBAction)CreatePoemFromAuthor:(UIButton *)sender {
     
     self.book = [self.allBooks getBook:self.selectedAuthorOne];
     self.book = [self.book stringByAppendingString:[self.allBooks getBook:self.selectedAuthorTwo]];
-//    NSLog(@"%@", self.book);
-//    self.book = [[NSString alloc] initWithData:ascii encoding:NSASCIIStringEncoding];
-//    NSLog(@"%@", self.book);
-    [self performSegueWithIdentifier:@"bdrSegue" sender:self];
 }
 
 - (IBAction)createPoemFromLeftAuthor:(UIButton *)sender {
     self.book = [self.allBooks getBook:self.selectedAuthorOne];
-    [self performSegueWithIdentifier:@"leftSegue" sender:self];
 }
 
 - (IBAction)createPoemFromRightAuthor:(UIButton *)sender {
     self.book = [self.allBooks getBook:self.selectedAuthorTwo];
-    [self performSegueWithIdentifier:@"rightSegue" sender:self];
 }
 
 

@@ -14,15 +14,14 @@
 		663BB82616E2F7E200B4FD9B /* Robert Burns.txt in Resources */ = {isa = PBXBuildFile; fileRef = 663BB82516E2F7E200B4FD9B /* Robert Burns.txt */; };
 		663BB82816E2F91500B4FD9B /* Thomas Hardy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 663BB82716E2F91500B4FD9B /* Thomas Hardy.txt */; };
 		663BB82A16E2F99500B4FD9B /* Oscar Wilde.txt in Resources */ = {isa = PBXBuildFile; fileRef = 663BB82916E2F99500B4FD9B /* Oscar Wilde.txt */; };
+		663BB83016E31D0F00B4FD9B /* splashScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 663BB82F16E31D0F00B4FD9B /* splashScreen.png */; };
+		663BB83216E31DF400B4FD9B /* paperBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 663BB83116E31DF400B4FD9B /* paperBackground.jpg */; };
 		6667790916B5737500A32731 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6667790816B5737500A32731 /* UIKit.framework */; };
 		6667790B16B5737500A32731 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6667790A16B5737500A32731 /* Foundation.framework */; };
 		6667790D16B5737500A32731 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6667790C16B5737500A32731 /* CoreGraphics.framework */; };
 		6667791316B5737500A32731 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6667791116B5737500A32731 /* InfoPlist.strings */; };
 		6667791516B5737500A32731 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6667791416B5737500A32731 /* main.m */; };
 		6667791916B5737500A32731 /* wordMushAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6667791816B5737500A32731 /* wordMushAppDelegate.m */; };
-		6667791B16B5737500A32731 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6667791A16B5737500A32731 /* Default.png */; };
-		6667791D16B5737500A32731 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6667791C16B5737500A32731 /* Default@2x.png */; };
-		6667791F16B5737500A32731 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6667791E16B5737500A32731 /* Default-568h@2x.png */; };
 		6667792216B5737500A32731 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6667792016B5737500A32731 /* MainStoryboard.storyboard */; };
 		6667792516B5737500A32731 /* wordMushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6667792416B5737500A32731 /* wordMushViewController.m */; };
 		6667792C16B5749100A32731 /* Tom Sawyer.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6667792B16B5749100A32731 /* Tom Sawyer.txt */; };
@@ -30,6 +29,12 @@
 		6667793A16B5834F00A32731 /* randomiserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6667793916B5834F00A32731 /* randomiserModel.m */; };
 		6667B15816E2563300EA782B /* bookDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6667B15716E2563300EA782B /* bookDatabase.m */; };
 		6667B16416E26B3E00EA782B /* Emily Dickinson.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6667B16316E26B3E00EA782B /* Emily Dickinson.txt */; };
+		66DA142616E3227800C8FB53 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DA142516E3227800C8FB53 /* Default.png */; };
+		66DA142816E3228000C8FB53 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DA142716E3228000C8FB53 /* Default@2x.png */; };
+		66DA142A16E3228600C8FB53 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DA142916E3228600C8FB53 /* Default-568h@2x.png */; };
+		66DA143016E3284000C8FB53 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66DA142F16E3284000C8FB53 /* Accounts.framework */; };
+		66DA143216E3284B00C8FB53 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66DA143116E3284B00C8FB53 /* AdSupport.framework */; };
+		66DA143416E3285000C8FB53 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66DA143316E3285000C8FB53 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,8 @@
 		663BB82516E2F7E200B4FD9B /* Robert Burns.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Robert Burns.txt"; sourceTree = "<group>"; };
 		663BB82716E2F91500B4FD9B /* Thomas Hardy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Thomas Hardy.txt"; sourceTree = "<group>"; };
 		663BB82916E2F99500B4FD9B /* Oscar Wilde.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Oscar Wilde.txt"; sourceTree = "<group>"; };
+		663BB82F16E31D0F00B4FD9B /* splashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashScreen.png; sourceTree = "<group>"; };
+		663BB83116E31DF400B4FD9B /* paperBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paperBackground.jpg; sourceTree = "<group>"; };
 		6667790416B5737500A32731 /* WordMush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordMush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6667790816B5737500A32731 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6667790A16B5737500A32731 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,6 +71,12 @@
 		6667B15616E2563200EA782B /* bookDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bookDatabase.h; sourceTree = "<group>"; };
 		6667B15716E2563300EA782B /* bookDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bookDatabase.m; sourceTree = "<group>"; };
 		6667B16316E26B3E00EA782B /* Emily Dickinson.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Emily Dickinson.txt"; sourceTree = "<group>"; };
+		66DA142516E3227800C8FB53 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		66DA142716E3228000C8FB53 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		66DA142916E3228600C8FB53 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		66DA142F16E3284000C8FB53 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		66DA143116E3284B00C8FB53 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		66DA143316E3285000C8FB53 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +84,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66DA143416E3285000C8FB53 /* Social.framework in Frameworks */,
+				66DA143216E3284B00C8FB53 /* AdSupport.framework in Frameworks */,
+				66DA143016E3284000C8FB53 /* Accounts.framework in Frameworks */,
 				6667790916B5737500A32731 /* UIKit.framework in Frameworks */,
 				6667790B16B5737500A32731 /* Foundation.framework in Frameworks */,
 				6667790D16B5737500A32731 /* CoreGraphics.framework in Frameworks */,
@@ -83,6 +99,12 @@
 		666778F916B5737500A32731 = {
 			isa = PBXGroup;
 			children = (
+				66DA143316E3285000C8FB53 /* Social.framework */,
+				66DA143116E3284B00C8FB53 /* AdSupport.framework */,
+				66DA142F16E3284000C8FB53 /* Accounts.framework */,
+				66DA142916E3228600C8FB53 /* Default-568h@2x.png */,
+				66DA142716E3228000C8FB53 /* Default@2x.png */,
+				66DA142516E3227800C8FB53 /* Default.png */,
 				6667790E16B5737500A32731 /* WordMush */,
 				6667790716B5737500A32731 /* Frameworks */,
 				6667790516B5737500A32731 /* Products */,
@@ -130,6 +152,8 @@
 				663BB82316E2F61A00B4FD9B /* Walt Whitman.txt */,
 				663BB82716E2F91500B4FD9B /* Thomas Hardy.txt */,
 				663BB82916E2F99500B4FD9B /* Oscar Wilde.txt */,
+				663BB82F16E31D0F00B4FD9B /* splashScreen.png */,
+				663BB83116E31DF400B4FD9B /* paperBackground.jpg */,
 				6667790F16B5737500A32731 /* Supporting Files */,
 			);
 			path = WordMush;
@@ -202,9 +226,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6667791316B5737500A32731 /* InfoPlist.strings in Resources */,
-				6667791B16B5737500A32731 /* Default.png in Resources */,
-				6667791D16B5737500A32731 /* Default@2x.png in Resources */,
-				6667791F16B5737500A32731 /* Default-568h@2x.png in Resources */,
 				6667792216B5737500A32731 /* MainStoryboard.storyboard in Resources */,
 				6667792C16B5749100A32731 /* Tom Sawyer.txt in Resources */,
 				6667B16416E26B3E00EA782B /* Emily Dickinson.txt in Resources */,
@@ -215,6 +236,11 @@
 				663BB82616E2F7E200B4FD9B /* Robert Burns.txt in Resources */,
 				663BB82816E2F91500B4FD9B /* Thomas Hardy.txt in Resources */,
 				663BB82A16E2F99500B4FD9B /* Oscar Wilde.txt in Resources */,
+				663BB83016E31D0F00B4FD9B /* splashScreen.png in Resources */,
+				663BB83216E31DF400B4FD9B /* paperBackground.jpg in Resources */,
+				66DA142616E3227800C8FB53 /* Default.png in Resources */,
+				66DA142816E3228000C8FB53 /* Default@2x.png in Resources */,
+				66DA142A16E3228600C8FB53 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

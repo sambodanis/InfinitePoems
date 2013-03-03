@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Social/Social.h>
 
-@interface randomTextViewController : UIViewController
+
+@interface randomTextViewController : UIViewController {
+    SLComposeViewController *mySLComposerSheet;
+}
 @property (nonatomic, strong) NSString *bookN;
 @property (nonatomic) BOOL specialSpacing;
 @end

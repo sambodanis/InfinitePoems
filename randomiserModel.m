@@ -97,7 +97,7 @@
     }
     NSLog(@"%d", [paragraphs count]);
     int randNum = rand() % ([paragraphs count] - 1);
-    while ([[paragraphs objectAtIndex:randNum] length] < 50) {
+    while ([[paragraphs objectAtIndex:randNum] length] < 100) {
         randNum = rand() % ([paragraphs count] - 1);
     }
     return [paragraphs objectAtIndex:randNum];
