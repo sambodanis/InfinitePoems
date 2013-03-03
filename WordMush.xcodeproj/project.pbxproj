@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		662DBAEB16E2E126004A52F1 /* Edgar Allen Poe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 662DBAEA16E2E126004A52F1 /* Edgar Allen Poe.txt */; };
 		663BB81F16E2F06300B4FD9B /* Robert Frost.txt in Resources */ = {isa = PBXBuildFile; fileRef = 663BB81E16E2F06300B4FD9B /* Robert Frost.txt */; };
+		663BB82216E2F53300B4FD9B /* Pablo Neruda.txt in Resources */ = {isa = PBXBuildFile; fileRef = 663BB82116E2F53300B4FD9B /* Pablo Neruda.txt */; };
+		663BB82416E2F61A00B4FD9B /* Walt Whitman.txt in Resources */ = {isa = PBXBuildFile; fileRef = 663BB82316E2F61A00B4FD9B /* Walt Whitman.txt */; };
+		663BB82616E2F7E200B4FD9B /* Robert Burns.txt in Resources */ = {isa = PBXBuildFile; fileRef = 663BB82516E2F7E200B4FD9B /* Robert Burns.txt */; };
 		6667790916B5737500A32731 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6667790816B5737500A32731 /* UIKit.framework */; };
 		6667790B16B5737500A32731 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6667790A16B5737500A32731 /* Foundation.framework */; };
 		6667790D16B5737500A32731 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6667790C16B5737500A32731 /* CoreGraphics.framework */; };
@@ -30,6 +33,9 @@
 /* Begin PBXFileReference section */
 		662DBAEA16E2E126004A52F1 /* Edgar Allen Poe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Edgar Allen Poe.txt"; sourceTree = "<group>"; };
 		663BB81E16E2F06300B4FD9B /* Robert Frost.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Robert Frost.txt"; sourceTree = "<group>"; };
+		663BB82116E2F53300B4FD9B /* Pablo Neruda.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Pablo Neruda.txt"; sourceTree = "<group>"; };
+		663BB82316E2F61A00B4FD9B /* Walt Whitman.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Walt Whitman.txt"; sourceTree = "<group>"; };
+		663BB82516E2F7E200B4FD9B /* Robert Burns.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Robert Burns.txt"; sourceTree = "<group>"; };
 		6667790416B5737500A32731 /* WordMush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordMush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6667790816B5737500A32731 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6667790A16B5737500A32731 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -115,6 +121,9 @@
 				6667792B16B5749100A32731 /* Tom Sawyer.txt */,
 				662DBAEA16E2E126004A52F1 /* Edgar Allen Poe.txt */,
 				663BB81E16E2F06300B4FD9B /* Robert Frost.txt */,
+				663BB82116E2F53300B4FD9B /* Pablo Neruda.txt */,
+				663BB82516E2F7E200B4FD9B /* Robert Burns.txt */,
+				663BB82316E2F61A00B4FD9B /* Walt Whitman.txt */,
 				6667790F16B5737500A32731 /* Supporting Files */,
 			);
 			path = WordMush;
@@ -195,6 +204,9 @@
 				6667B16416E26B3E00EA782B /* Emily Dickinson.txt in Resources */,
 				662DBAEB16E2E126004A52F1 /* Edgar Allen Poe.txt in Resources */,
 				663BB81F16E2F06300B4FD9B /* Robert Frost.txt in Resources */,
+				663BB82216E2F53300B4FD9B /* Pablo Neruda.txt in Resources */,
+				663BB82416E2F61A00B4FD9B /* Walt Whitman.txt in Resources */,
+				663BB82616E2F7E200B4FD9B /* Robert Burns.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

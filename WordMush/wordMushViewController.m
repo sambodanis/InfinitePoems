@@ -59,7 +59,9 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"bdrSegue"]) {
+        BOOL specialSpacing = [self.selectedAuthor isEqualToString:@"Robert Frost"];
         [segue.destinationViewController setBookN:self.book];
+        [segue.destinationViewController setSpecialSpacing:specialSpacing];
     }
 }
 

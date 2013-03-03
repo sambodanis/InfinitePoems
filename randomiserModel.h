@@ -10,6 +10,7 @@
 
 @interface randomiserModel : NSObject
 
-- (NSString *)getRandomTextFromInput:(NSString *)inputBook;
+//- (NSString *)getRandomTextFromInput:(NSString *)inputBook;
+- (NSString *)getRandomTextFromInput:(NSString *)inputBook withSpecialSpacing:(BOOL)spacing;
 
 @end

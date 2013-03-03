@@ -12,11 +12,13 @@
 
 @interface randomiserModel()
 @property (nonatomic, strong) NSMutableDictionary *stringsAndSubStrings;
+@property (nonatomic) BOOL specialSpacing;
 @end
 
 @implementation randomiserModel
 
 @synthesize stringsAndSubStrings = _stringsAndSubStrings;
+@synthesize specialSpacing = _specialSpacing;
 
 - (NSMutableDictionary *)stringsAndSubStrings {
     if (!_stringsAndSubStrings) {
@@ -69,6 +71,7 @@
     
     for (int i = 0; i < MAX_BOOK_LENGTH; i++) {
         NSMutableArray *possibleNextWords = [self.stringsAndSubStrings objectForKey:currentWord];
+        if (!possibleNextWords) break;
         currentWord = [possibleNextWords objectAtIndex:(arc4random() % [possibleNextWords count])];
         result = [result stringByAppendingFormat:@"%@ ", currentWord];
         
@@ -82,7 +85,7 @@
     NSMutableArray *paragraphs = [[NSMutableArray alloc] init];
     NSString *currentString = @"";
     for (int i = 0; i < [randomText length]; i++) {
-        if ([randomText characterAtIndex:i] == '\n' && [randomText characterAtIndex:i + 1] == '\n') {
+        if ([randomText characterAtIndex:i] == '\n' && [randomText characterAtIndex:i + 1] == '\n' && ([randomText characterAtIndex:i + 2] == '\n' || !self.specialSpacing)) {
             [paragraphs addObject:currentString];
             currentString = @"";
             i += 1;
@@ -94,12 +97,15 @@
     }
     NSLog(@"%d", [paragraphs count]);
     int randNum = rand() % ([paragraphs count] - 1);
-
+    while ([[paragraphs objectAtIndex:randNum] length] < 50) {
+        randNum = rand() % ([paragraphs count] - 1);
+    }
     return [paragraphs objectAtIndex:randNum];
 }
 
 // Determine seed and return a random paragraph. 
-- (NSString *)getRandomTextFromInput:(NSString *)inputBook {
+- (NSString *)getRandomTextFromInput:(NSString *)inputBook withSpecialSpacing:(BOOL)spacing {
+    self.specialSpacing = spacing;
     [self analyseFrequenciesFromBook:inputBook];
     NSString *seed = @"";
     int maxOccurences = 0;

@@ -10,5 +10,5 @@
 
 @interface randomTextViewController : UIViewController
 @property (nonatomic, strong) NSString *bookN;
-
+@property (nonatomic) BOOL specialSpacing;
 @end

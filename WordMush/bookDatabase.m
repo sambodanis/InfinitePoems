@@ -42,10 +42,10 @@
     NSArray *textFiles = [[NSBundle mainBundle] pathsForResourcesOfType:@".txt" inDirectory:@"./"];
     BOOL addThisOne = TRUE;
     for (NSString *filename in textFiles) {
-        if (!addThisOne) {
-            addThisOne = TRUE;
-            continue;
-        }
+//        if (!addThisOne) {
+//            addThisOne = TRUE;
+//            continue;
+//        }
         int beginningOfName = [filename length] - 1;
         while ([filename characterAtIndex:beginningOfName--] != '/');
         NSString *authorName = @"";
@@ -54,7 +54,7 @@
         }
 //        NSLog(@"%@", authorName);
         [self.authorList addObject:authorName];
-        addThisOne = FALSE;
+//        addThisOne = FALSE;
     }
     
     return self.authorList;

@@ -16,6 +16,11 @@
 
 @implementation randomTextViewController
 @synthesize bookN = _bookN;
+@synthesize specialSpacing = _specialSpacing;
+
+- (void)setSpecialSpacing:(BOOL)specialSpacing {
+    _specialSpacing = specialSpacing;
+}
 
 
 - (randomiserModel *)bookRandomiser {
@@ -38,7 +43,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.randomTextView.text = [self.bookRandomiser getRandomTextFromInput:self.bookN];
+    self.randomTextView.text = [self.bookRandomiser getRandomTextFromInput:self.bookN withSpecialSpacing:self.specialSpacing];
 }
 
 @end
