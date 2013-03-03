@@ -40,21 +40,17 @@
 // file to avoid duplicate entries.
 - (NSArray *)getAuthorList {
     NSArray *textFiles = [[NSBundle mainBundle] pathsForResourcesOfType:@".txt" inDirectory:@"./"];
-    BOOL addThisOne = TRUE;
     for (NSString *filename in textFiles) {
-//        if (!addThisOne) {
-//            addThisOne = TRUE;
-//            continue;
-//        }
         int beginningOfName = [filename length] - 1;
         while ([filename characterAtIndex:beginningOfName--] != '/');
         NSString *authorName = @"";
+        BOOL spaceExists = false;
         for (int i = beginningOfName + 2; i < [filename length] - 4; i++) {
             authorName = [authorName stringByAppendingFormat:@"%c", [filename characterAtIndex:i]];
+            if ([filename characterAtIndex:i] == ' ') spaceExists = true;
         }
-//        NSLog(@"%@", authorName);
-        [self.authorList addObject:authorName];
-//        addThisOne = FALSE;
+        
+        if (spaceExists) [self.authorList addObject:authorName];
     }
     
     return self.authorList;
@@ -63,7 +59,6 @@
 
 - (NSString *)getBook:(NSString *)forAuthor {
     NSData *ascii = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:forAuthor ofType:@".txt"]];
-//    return [[NSString alloc] initWithData:ascii encoding:NSASCIIStringEncoding];
     return [[NSString alloc] initWithData:ascii encoding:NSASCIIStringEncoding];
 
 }

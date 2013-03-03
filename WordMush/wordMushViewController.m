@@ -13,7 +13,10 @@
 
 @property (nonatomic, strong) NSString *book;
 
+
 @property (strong, nonatomic) IBOutlet UIPickerView *bookListPicker;
+@property (strong, nonatomic) IBOutlet UIButton *leftPoemButton;
+@property (strong, nonatomic) IBOutlet UIButton *rightPoemButton;
 
 @property (nonatomic, strong) bookDatabase *allBooks;
 
@@ -21,7 +24,9 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *CreatePoemButton;
 
-@property (nonatomic, strong) NSString *selectedAuthor;
+@property (nonatomic, strong) NSString *selectedAuthorOne;
+@property (nonatomic, strong) NSString *selectedAuthorTwo;
+
 @end
 
 @implementation wordMushViewController
@@ -29,7 +34,10 @@
 @synthesize allBooks = _allBooks;
 @synthesize bookListPicker = _bookListPicker;
 @synthesize listOfAuthors = _listOfAuthors;
-@synthesize selectedAuthor = _selectedAuthor;
+@synthesize selectedAuthorOne = _selectedAuthorOne;
+@synthesize selectedAuthorTwo = _selectedAuthorTwo;
+
+
 
 - (NSArray *)listOfAuthors {
     if (!_listOfAuthors) {
@@ -38,12 +46,18 @@
     return _listOfAuthors;
 }
 
-- (NSString *)selectedAuthor {
-    if (!_selectedAuthor) {
-        _selectedAuthor = [[NSString alloc] init];
-//        _selectedAuthor = [self.listOfAuthors objectAtIndex:0];
+- (NSString *)selectedAuthorTwo {
+    if (!_selectedAuthorTwo) {
+        _selectedAuthorTwo = [[NSString alloc] init];
     }
-    return _selectedAuthor;
+    return _selectedAuthorTwo;
+}
+
+- (NSString *)selectedAuthorOne {
+    if (!_selectedAuthorOne) {
+        _selectedAuthorOne = [[NSString alloc] init];
+    }
+    return _selectedAuthorOne;
 }
 
 - (bookDatabase *)allBooks {
@@ -59,9 +73,18 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"bdrSegue"]) {
-        BOOL specialSpacing = [self.selectedAuthor isEqualToString:@"Robert Frost"];
+        BOOL specialSpacingOne = [self.selectedAuthorOne isEqualToString:@"Robert Frost"];
         [segue.destinationViewController setBookN:self.book];
-        [segue.destinationViewController setSpecialSpacing:specialSpacing];
+        [segue.destinationViewController setSpecialSpacing:specialSpacingOne];
+    } else if ([segue.identifier isEqualToString:@"leftSegue"]) {
+        BOOL specialSpacingOne = [self.selectedAuthorOne isEqualToString:@"Robert Frost"];
+        [segue.destinationViewController setBookN:self.book];
+        [segue.destinationViewController setSpecialSpacing:specialSpacingOne];
+    } else if ([segue.identifier isEqualToString:@"rightSegue"]) {
+        BOOL specialSpacingOne = [self.selectedAuthorTwo isEqualToString:@"Robert Frost"];
+        [segue.destinationViewController setBookN:self.book];
+        [segue.destinationViewController setSpecialSpacing:specialSpacingOne];
+
     }
 }
 
@@ -78,12 +101,22 @@
 }
 - (IBAction)CreatePoemFromAuthor:(UIButton *)sender {
     
-//    NSData *ascii = [NSData dataWithContentsOfFile:@"/Users/sambodanis/Dropbox/WordMush/WordMush/Hamlet.txt"];
-    self.book = [self.allBooks getBook:self.selectedAuthor];
+    self.book = [self.allBooks getBook:self.selectedAuthorOne];
+    self.book = [self.book stringByAppendingString:[self.allBooks getBook:self.selectedAuthorTwo]];
 //    NSLog(@"%@", self.book);
 //    self.book = [[NSString alloc] initWithData:ascii encoding:NSASCIIStringEncoding];
 //    NSLog(@"%@", self.book);
     [self performSegueWithIdentifier:@"bdrSegue" sender:self];
+}
+
+- (IBAction)createPoemFromLeftAuthor:(UIButton *)sender {
+    self.book = [self.allBooks getBook:self.selectedAuthorOne];
+    [self performSegueWithIdentifier:@"leftSegue" sender:self];
+}
+
+- (IBAction)createPoemFromRightAuthor:(UIButton *)sender {
+    self.book = [self.allBooks getBook:self.selectedAuthorTwo];
+    [self performSegueWithIdentifier:@"rightSegue" sender:self];
 }
 
 
@@ -93,7 +126,7 @@
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 1;
+    return 2;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
@@ -101,10 +134,19 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    self.selectedAuthor = [self.listOfAuthors objectAtIndex:row];
-    [self.CreatePoemButton setTitle:self.selectedAuthor forState:UIControlStateNormal];
-    NSLog(@"%d, %@", row, self.selectedAuthor);
-    [pickerView selectRow:row inComponent:0 animated:YES];
+    if (component == 0) {
+        self.selectedAuthorOne = [self.listOfAuthors objectAtIndex:row];
+        [self.leftPoemButton setTitle:self.selectedAuthorOne forState:UIControlStateNormal];
+        NSLog(@"%d, %@", row, self.selectedAuthorOne);
+        [pickerView selectRow:row inComponent:0 animated:YES];
+    } else if (component == 1) {
+        self.selectedAuthorTwo = [self.listOfAuthors objectAtIndex:row];        
+        [self.rightPoemButton setTitle:self.selectedAuthorTwo forState:UIControlStateNormal];
+        NSLog(@"%d, %@", row, self.selectedAuthorTwo);
+        [pickerView selectRow:row inComponent:1 animated:YES];
+    }
+    [self.CreatePoemButton setTitle:[self.selectedAuthorOne stringByAppendingFormat:@" + %@", self.selectedAuthorTwo] forState:UIControlStateNormal];
+    NSLog(@"%@", [self.selectedAuthorOne stringByAppendingFormat:@" + %@", self.selectedAuthorTwo]);
 }
 
 
@@ -115,8 +157,12 @@
     self.bookListPicker = [[UIPickerView alloc] init];
     self.bookListPicker.delegate = self;
     self.bookListPicker.dataSource = self;
-    self.selectedAuthor = [self.listOfAuthors objectAtIndex:0];
-    [self.CreatePoemButton setTitle:self.selectedAuthor forState:UIControlStateNormal];
+    self.selectedAuthorOne = [self.listOfAuthors objectAtIndex:0];
+    self.selectedAuthorTwo = [self.listOfAuthors objectAtIndex:0];
+    [self.CreatePoemButton setTitle:self.selectedAuthorOne forState:UIControlStateNormal];
+    [self.leftPoemButton setTitle:self.selectedAuthorOne forState:UIControlStateNormal];
+    [self.rightPoemButton setTitle:self.selectedAuthorTwo forState:UIControlStateNormal];
+    [self.CreatePoemButton setTitle:[self.selectedAuthorOne stringByAppendingFormat:@" + %@", self.selectedAuthorTwo] forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning

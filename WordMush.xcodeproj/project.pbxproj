@@ -12,6 +12,8 @@
 		663BB82216E2F53300B4FD9B /* Pablo Neruda.txt in Resources */ = {isa = PBXBuildFile; fileRef = 663BB82116E2F53300B4FD9B /* Pablo Neruda.txt */; };
 		663BB82416E2F61A00B4FD9B /* Walt Whitman.txt in Resources */ = {isa = PBXBuildFile; fileRef = 663BB82316E2F61A00B4FD9B /* Walt Whitman.txt */; };
 		663BB82616E2F7E200B4FD9B /* Robert Burns.txt in Resources */ = {isa = PBXBuildFile; fileRef = 663BB82516E2F7E200B4FD9B /* Robert Burns.txt */; };
+		663BB82816E2F91500B4FD9B /* Thomas Hardy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 663BB82716E2F91500B4FD9B /* Thomas Hardy.txt */; };
+		663BB82A16E2F99500B4FD9B /* Oscar Wilde.txt in Resources */ = {isa = PBXBuildFile; fileRef = 663BB82916E2F99500B4FD9B /* Oscar Wilde.txt */; };
 		6667790916B5737500A32731 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6667790816B5737500A32731 /* UIKit.framework */; };
 		6667790B16B5737500A32731 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6667790A16B5737500A32731 /* Foundation.framework */; };
 		6667790D16B5737500A32731 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6667790C16B5737500A32731 /* CoreGraphics.framework */; };
@@ -36,6 +38,8 @@
 		663BB82116E2F53300B4FD9B /* Pablo Neruda.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Pablo Neruda.txt"; sourceTree = "<group>"; };
 		663BB82316E2F61A00B4FD9B /* Walt Whitman.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Walt Whitman.txt"; sourceTree = "<group>"; };
 		663BB82516E2F7E200B4FD9B /* Robert Burns.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Robert Burns.txt"; sourceTree = "<group>"; };
+		663BB82716E2F91500B4FD9B /* Thomas Hardy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Thomas Hardy.txt"; sourceTree = "<group>"; };
+		663BB82916E2F99500B4FD9B /* Oscar Wilde.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Oscar Wilde.txt"; sourceTree = "<group>"; };
 		6667790416B5737500A32731 /* WordMush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordMush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6667790816B5737500A32731 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6667790A16B5737500A32731 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -124,6 +128,8 @@
 				663BB82116E2F53300B4FD9B /* Pablo Neruda.txt */,
 				663BB82516E2F7E200B4FD9B /* Robert Burns.txt */,
 				663BB82316E2F61A00B4FD9B /* Walt Whitman.txt */,
+				663BB82716E2F91500B4FD9B /* Thomas Hardy.txt */,
+				663BB82916E2F99500B4FD9B /* Oscar Wilde.txt */,
 				6667790F16B5737500A32731 /* Supporting Files */,
 			);
 			path = WordMush;
@@ -207,6 +213,8 @@
 				663BB82216E2F53300B4FD9B /* Pablo Neruda.txt in Resources */,
 				663BB82416E2F61A00B4FD9B /* Walt Whitman.txt in Resources */,
 				663BB82616E2F7E200B4FD9B /* Robert Burns.txt in Resources */,
+				663BB82816E2F91500B4FD9B /* Thomas Hardy.txt in Resources */,
+				663BB82A16E2F99500B4FD9B /* Oscar Wilde.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
