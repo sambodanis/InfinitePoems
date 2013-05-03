@@ -40,6 +40,7 @@
 // file to avoid duplicate entries.
 - (NSArray *)getAuthorList {
     NSArray *textFiles = [[NSBundle mainBundle] pathsForResourcesOfType:@".txt" inDirectory:@"./"];
+//    NSLog(@"files: %@", textFiles);
     for (NSString *filename in textFiles) {
         int beginningOfName = [filename length] - 1;
         while ([filename characterAtIndex:beginningOfName--] != '/');

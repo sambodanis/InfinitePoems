@@ -15,4 +15,6 @@
 }
 @property (nonatomic, strong) NSString *bookN;
 @property (nonatomic) BOOL specialSpacing;
+@property (nonatomic, strong) NSArray *bookList;
+
 @end

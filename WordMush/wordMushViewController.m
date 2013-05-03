@@ -13,7 +13,6 @@
 
 @property (nonatomic, strong) NSString *book;
 
-
 @property (strong, nonatomic) IBOutlet UIPickerView *bookListPicker;
 @property (strong, nonatomic) IBOutlet UIButton *leftPoemButton;
 @property (strong, nonatomic) IBOutlet UIButton *rightPoemButton;
@@ -36,7 +35,6 @@
 @synthesize listOfAuthors = _listOfAuthors;
 @synthesize selectedAuthorOne = _selectedAuthorOne;
 @synthesize selectedAuthorTwo = _selectedAuthorTwo;
-
 
 
 - (NSArray *)listOfAuthors {
@@ -76,15 +74,17 @@
         BOOL specialSpacing = [self.selectedAuthorOne isEqualToString:@"Robert Frost"] || [self.selectedAuthorTwo isEqualToString:@"Robert Frost"];
         [segue.destinationViewController setBookN:self.book];
         [segue.destinationViewController setSpecialSpacing:specialSpacing];
+        [segue.destinationViewController setBookList:[NSArray arrayWithObjects:self.selectedAuthorOne, self.selectedAuthorTwo, nil]];
     } else if ([segue.identifier isEqualToString:@"leftSegue"]) {
         BOOL specialSpacing = [self.selectedAuthorOne isEqualToString:@"Robert Frost"];
         [segue.destinationViewController setBookN:self.book];
         [segue.destinationViewController setSpecialSpacing:specialSpacing];
+        [segue.destinationViewController setBookList:[NSArray arrayWithObjects:self.selectedAuthorOne, nil]];
     } else if ([segue.identifier isEqualToString:@"rightSegue"]) {
         BOOL specialSpacing = [self.selectedAuthorTwo isEqualToString:@"Robert Frost"];
         [segue.destinationViewController setBookN:self.book];
         [segue.destinationViewController setSpecialSpacing:specialSpacing];
-
+        [segue.destinationViewController setBookList:[NSArray arrayWithObjects:self.selectedAuthorTwo, nil]];
     }
 }
 
@@ -121,16 +121,16 @@
     if (component == 0) {
         self.selectedAuthorOne = [self.listOfAuthors objectAtIndex:row];
         [self.leftPoemButton setTitle:self.selectedAuthorOne forState:UIControlStateNormal];
-        NSLog(@"%d, %@", row, self.selectedAuthorOne);
+//        NSLog(@"%d, %@", row, self.selectedAuthorOne);
         [pickerView selectRow:row inComponent:0 animated:YES];
     } else if (component == 1) {
         self.selectedAuthorTwo = [self.listOfAuthors objectAtIndex:row];        
         [self.rightPoemButton setTitle:self.selectedAuthorTwo forState:UIControlStateNormal];
-        NSLog(@"%d, %@", row, self.selectedAuthorTwo);
+//        NSLog(@"%d, %@", row, self.selectedAuthorTwo);
         [pickerView selectRow:row inComponent:1 animated:YES];
     }
     [self.CreatePoemButton setTitle:[self.selectedAuthorOne stringByAppendingFormat:@" + %@", self.selectedAuthorTwo] forState:UIControlStateNormal];
-    NSLog(@"%@", [self.selectedAuthorOne stringByAppendingFormat:@" + %@", self.selectedAuthorTwo]);
+//    NSLog(@"%@", [self.selectedAuthorOne stringByAppendingFormat:@" + %@", self.selectedAuthorTwo]);
 }
 
 
@@ -147,6 +147,7 @@
     [self.leftPoemButton setTitle:self.selectedAuthorOne forState:UIControlStateNormal];
     [self.rightPoemButton setTitle:self.selectedAuthorTwo forState:UIControlStateNormal];
     [self.CreatePoemButton setTitle:[self.selectedAuthorOne stringByAppendingFormat:@" + %@", self.selectedAuthorTwo] forState:UIControlStateNormal];
+//    self.rightPoemButton.hidden = TRUE;
 }
 
 - (void)didReceiveMemoryWarning

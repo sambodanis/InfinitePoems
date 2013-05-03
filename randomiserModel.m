@@ -85,17 +85,19 @@
     NSMutableArray *paragraphs = [[NSMutableArray alloc] init];
     NSString *currentString = @"";
     for (int i = 0; i < [randomText length]; i++) {
-        if ([randomText characterAtIndex:i] == '\n' && [randomText characterAtIndex:i + 1] == '\n' && ([randomText characterAtIndex:i + 2] == '\n' || !self.specialSpacing)) {
+        if ([randomText characterAtIndex:i] == '\n' &&
+            [randomText characterAtIndex:i + 1] == '\n' &&
+            ([randomText characterAtIndex:i + 2] == '\n' || !self.specialSpacing)) {
             [paragraphs addObject:currentString];
             currentString = @"";
             i += 1;
         }
         currentString = [currentString stringByAppendingFormat:@"%c", [randomText characterAtIndex:i]];
     }
-    for (NSString *para in paragraphs) {
-        NSLog(@"%@", para);
-    }
-    NSLog(@"%d", [paragraphs count]);
+//    for (NSString *para in paragraphs) {
+//        NSLog(@"%@", para);
+//    }
+//    NSLog(@"%d", [paragraphs count]);
     int randNum = rand() % ([paragraphs count] - 1);
     while ([[paragraphs objectAtIndex:randNum] length] < 100) {
         randNum = rand() % ([paragraphs count] - 1);
@@ -109,7 +111,17 @@
     [self analyseFrequenciesFromBook:inputBook];
     NSString *seed = @"";
     int maxOccurences = 0;
+
+    /****** Writing to file code for making new model plists ******/
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *documentsDirectory = [paths objectAtIndex:0];
+//        
+//    NSString *plistPath = [documentsDirectory stringByAppendingPathComponent:@"testPlist.plist"];
+//    NSLog(@"%@", plistPath);
+//    [self.stringsAndSubStrings writeToFile:plistPath atomically: YES];
+    
     for (NSString *key in self.stringsAndSubStrings) {
+    
         int currOccurences = [[self.stringsAndSubStrings objectForKey:key] count];
         if (currOccurences > maxOccurences) seed = key;
     }
@@ -117,5 +129,52 @@
     NSString *singlePoemBlock = [self extractPoemBlock:[self writeRandomText:seed]];
     return singlePoemBlock;
 }
+
+
+- (NSString *)getRandomTextFromPlist:(NSArray *)inputBooks withSpecialSpacing:(BOOL)spacing {
+    self.specialSpacing = spacing;
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:[inputBooks objectAtIndex:0] ofType:@".plist"];
+    NSDictionary *tempDict1 = [NSDictionary dictionaryWithContentsOfFile:path];
+    NSDictionary *tempDict2 = NULL;
+    NSLog(@"Input books: %@", inputBooks);
+    if ([inputBooks count] == 2) {
+        path = [[NSBundle mainBundle] pathForResource:[inputBooks objectAtIndex:1] ofType:@".plist"];
+        tempDict2 = [NSDictionary dictionaryWithContentsOfFile:path];
+    }
+    
+    self.stringsAndSubStrings = [self mergeDictionaries:tempDict1 and:tempDict2];
+    NSLog(@"size: %d", [self.stringsAndSubStrings count]);
+    NSString *seed = @"";
+    int maxOccurences = 0;
+    
+    for (NSString *key in self.stringsAndSubStrings) {
+        
+        int currOccurences = [[self.stringsAndSubStrings objectForKey:key] count];
+        if (currOccurences > maxOccurences) seed = key;
+    }
+    
+    NSString *singlePoemBlock = [self extractPoemBlock:[self writeRandomText:seed]];
+    return singlePoemBlock;
+}
+
+// Merges 2 dictionaries into 1
+- (NSMutableDictionary *)mergeDictionaries:(NSDictionary *)dict1 and:(NSDictionary *)dict2 {
+    NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
+    for (NSString *key in dict1) {
+        NSMutableArray *currentFollowingWords = [dict1 objectForKey:key];
+        if ([dict2 objectForKey:key]) {
+            [currentFollowingWords arrayByAddingObjectsFromArray:[dict2 objectForKey:key]];
+        }
+        [result setObject:currentFollowingWords forKey:key];
+    }
+    for (NSString *key in dict2) {
+        if (![dict1 objectForKey:key]) {
+            [result setObject:[dict2 objectForKey:key] forKey:key];
+        }
+    }
+    return result;
+}
+
 
 @end

@@ -10,11 +10,11 @@
                 <viewController id="2" customClass="wordMushViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tky-Co-llc">
-                                <rect key="frame" x="20" y="353" width="280" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="20" y="318" width="280" height="79"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Tom Sawyer">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -30,15 +30,15 @@
                             </button>
                             <pickerView contentMode="scaleToFill" restorationIdentifier="" id="ugk-Ex-gwo">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="2" id="fxS-Oy-aGf"/>
                                     <outlet property="delegate" destination="2" id="6ff-ZD-epR"/>
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jup-Ew-r3N">
-                                <rect key="frame" x="20" y="302" width="139" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="20" y="247" width="139" height="64"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,8 +53,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FaH-a4-0uL">
-                                <rect key="frame" x="161" y="302" width="139" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="161" y="247" width="139" height="64"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -68,13 +68,6 @@
                                     <segue destination="YdX-GT-Jvc" kind="push" identifier="rightSegue" id="AEl-B7-oCD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Press the button corresponding to the poet who's work you would like to generate random poetry from:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="di2-ty-yyV">
-                                <rect key="frame" x="20" y="219" width="282" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -85,6 +78,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="CreatePoemButton" destination="Tky-Co-llc" id="2VR-77-gc8"/>
                         <outlet property="bookListPicker" destination="ugk-Ex-gwo" id="aDw-R7-phn"/>
@@ -112,6 +106,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="tdg-1Q-TzU"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWM-9J-wEr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,6 +131,10 @@
                                 <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="7F3-tT-qOB">
+                                <rect key="frame" x="142" y="189" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -148,6 +147,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="randomTextView" destination="xvY-A5-rKa" id="haV-mg-gLi"/>
+                        <outlet property="spinner" destination="7F3-tT-qOB" id="bjV-gr-NLO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PEg-uH-xDC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -171,34 +171,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Yk-fC-iWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="235" y="76"/>
+            <point key="canvasLocation" x="64" y="17"/>
         </scene>
     </scenes>
     <resources>
         <image name="paperBackground.jpg" width="4000" height="3070"/>
         <image name="splashScreen.png" width="745" height="1053"/>
     </resources>
-    <classes>
-        <class className="randomTextViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/randomTextViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="postToFacebook:"/>
-                <relationship kind="outlet" name="randomTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="wordMushViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/wordMushViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="CreatePoemFromAuthor:" candidateClass="UIButton"/>
-                <relationship kind="action" name="createPoemFromLeftAuthor:" candidateClass="UIButton"/>
-                <relationship kind="action" name="createPoemFromRightAuthor:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="CreatePoemButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="bookListPicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="leftPoemButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="rightPoemButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -13,4 +13,6 @@
 //- (NSString *)getRandomTextFromInput:(NSString *)inputBook;
 - (NSString *)getRandomTextFromInput:(NSString *)inputBook withSpecialSpacing:(BOOL)spacing;
 
+- (NSString *)getRandomTextFromPlist:(NSArray *)inputBooks withSpecialSpacing:(BOOL)spacing;
+
 @end

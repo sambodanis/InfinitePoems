@@ -11,6 +11,7 @@
 
 @interface randomTextViewController ()
 @property (strong, nonatomic) IBOutlet UITextView *randomTextView;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @property (strong, nonatomic) randomiserModel *bookRandomiser;
 
@@ -19,6 +20,7 @@
 @implementation randomTextViewController
 @synthesize bookN = _bookN;
 @synthesize specialSpacing = _specialSpacing;
+@synthesize bookList = _bookList;
 
 - (void)setSpecialSpacing:(BOOL)specialSpacing {
     _specialSpacing = specialSpacing;
@@ -36,6 +38,11 @@
     _bookN = bookN;
 }
 
+- (void)setBookList:(NSArray *)bookList {
+    _bookList = bookList;
+    NSLog(@"%@", bookList);
+}
+
 - (NSString *)randomiseTextWithInputBook:(NSString *)book {
     NSString *result = book;
     
@@ -48,7 +55,7 @@
         
         mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
         
-        [mySLComposerSheet setInitialText:[@"Check out this great poem I made with WordMush\n" stringByAppendingString:self.randomTextView.text]];
+        [mySLComposerSheet setInitialText:[@"Check out this great poem I made with Infinite Poem:\n" stringByAppendingString:self.randomTextView.text]];
         
         //        [mySLComposerSheet addImage:[UIImage imageNamed:@"action-location.png" ]];
         
@@ -86,7 +93,16 @@
     [[self view] setBackgroundColor:colour];
 
 //    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"paperBackground.png"]];
-    self.randomTextView.text = [self.bookRandomiser getRandomTextFromInput:self.bookN withSpecialSpacing:self.specialSpacing];
+    [self.spinner startAnimating];
+    dispatch_queue_t randomGenerationQueue = dispatch_queue_create("Randome Gen Creator", NULL);
+    dispatch_async(randomGenerationQueue, ^{
+        NSString *randomBook = [self.bookRandomiser getRandomTextFromPlist:self.bookList withSpecialSpacing:self.specialSpacing];
+//        NSString *randomBook = [self.bookRandomiser getRandomTextFromInput:self.bookN withSpecialSpacing:self.specialSpacing];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.randomTextView.text = randomBook;
+            [self.spinner stopAnimating];
+        });
+    });
 }
 
 @end
