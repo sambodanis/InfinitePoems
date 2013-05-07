@@ -7,12 +7,15 @@
 //
 
 #import "wordMushAppDelegate.h"
+#import "wordMushIAPHelper.h"
 
 @implementation wordMushAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [wordMushIAPHelper sharedInstance];
+    
     return YES;
 }
 							

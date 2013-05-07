@@ -96,8 +96,12 @@
     [self.spinner startAnimating];
     dispatch_queue_t randomGenerationQueue = dispatch_queue_create("Randome Gen Creator", NULL);
     dispatch_async(randomGenerationQueue, ^{
+        
+        /****** Swap the uncommented below to make new dict plists ******/
+
         NSString *randomBook = [self.bookRandomiser getRandomTextFromPlist:self.bookList withSpecialSpacing:self.specialSpacing];
 //        NSString *randomBook = [self.bookRandomiser getRandomTextFromInput:self.bookN withSpecialSpacing:self.specialSpacing];
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             self.randomTextView.text = randomBook;
             [self.spinner stopAnimating];

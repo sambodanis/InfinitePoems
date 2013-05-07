@@ -38,6 +38,54 @@
 		6667793A16B5834F00A32731 /* randomiserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6667793916B5834F00A32731 /* randomiserModel.m */; };
 		6667B15816E2563300EA782B /* bookDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6667B15716E2563300EA782B /* bookDatabase.m */; };
 		6667B16416E26B3E00EA782B /* Emily Dickinson.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6667B16316E26B3E00EA782B /* Emily Dickinson.txt */; };
+		669BED911737EA0B008B18A9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669BED901737EA0B008B18A9 /* StoreKit.framework */; };
+		669BED941737EA83008B18A9 /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 669BED931737EA83008B18A9 /* IAPHelper.m */; };
+		669BED971737EF01008B18A9 /* wordMushIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 669BED961737EF01008B18A9 /* wordMushIAPHelper.m */; };
+		669BED9E1737FC0B008B18A9 /* IAPTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 669BED9D1737FC0B008B18A9 /* IAPTableView.m */; };
+		669BEDBA1738599E008B18A9 /* Lewis Carroll.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDA317385999008B18A9 /* Lewis Carroll.txt */; };
+		669BEDBB1738599E008B18A9 /* Matthew Arnold.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDA417385999008B18A9 /* Matthew Arnold.txt */; };
+		669BEDBC1738599E008B18A9 /* Phillis Wheatley.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDA517385999008B18A9 /* Phillis Wheatley.txt */; };
+		669BEDBD1738599E008B18A9 /* Henry Wadsworth.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDA61738599A008B18A9 /* Henry Wadsworth.txt */; };
+		669BEDBE1738599E008B18A9 /* William Blake.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDA71738599A008B18A9 /* William Blake.txt */; };
+		669BEDBF1738599E008B18A9 /* Elizabeth Browning.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDA81738599B008B18A9 /* Elizabeth Browning.txt */; };
+		669BEDC01738599E008B18A9 /* John Keats.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDA91738599B008B18A9 /* John Keats.txt */; };
+		669BEDC11738599E008B18A9 /* Rudyard Kipling.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDAA1738599B008B18A9 /* Rudyard Kipling.txt */; };
+		669BEDC21738599E008B18A9 /* Othello.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDAB1738599C008B18A9 /* Othello.txt */; };
+		669BEDC31738599E008B18A9 /* King Lear.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDAC1738599C008B18A9 /* King Lear.txt */; };
+		669BEDC41738599E008B18A9 /* Macbeth.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDAD1738599C008B18A9 /* Macbeth.txt */; };
+		669BEDC51738599E008B18A9 /* Julius Caesar.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDAE1738599C008B18A9 /* Julius Caesar.txt */; };
+		669BEDC61738599E008B18A9 /* Titus Andronicus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDAF1738599C008B18A9 /* Titus Andronicus.txt */; };
+		669BEDC71738599E008B18A9 /* Coriolanus.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDB01738599C008B18A9 /* Coriolanus.txt */; };
+		669BEDC81738599E008B18A9 /* Romeo and Juliet.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDB11738599D008B18A9 /* Romeo and Juliet.txt */; };
+		669BEDC91738599E008B18A9 /* The Winter's Tale.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDB21738599D008B18A9 /* The Winter's Tale.txt */; };
+		669BEDCA1738599E008B18A9 /* Twelfth Night.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDB31738599D008B18A9 /* Twelfth Night.txt */; };
+		669BEDCB1738599E008B18A9 /* The Tempest.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDB41738599D008B18A9 /* The Tempest.txt */; };
+		669BEDCC1738599E008B18A9 /* The Taming of the Shrew.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDB51738599D008B18A9 /* The Taming of the Shrew.txt */; };
+		669BEDCD1738599E008B18A9 /* Much Ado About Nothing.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDB61738599D008B18A9 /* Much Ado About Nothing.txt */; };
+		669BEDCE1738599E008B18A9 /* A Midsummer Night's Dream .txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDB71738599D008B18A9 /* A Midsummer Night's Dream .txt */; };
+		669BEDCF1738599E008B18A9 /* The Comedy of Errors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDB81738599E008B18A9 /* The Comedy of Errors.txt */; };
+		669BEDD01738599E008B18A9 /* All's Well That Ends Well.txt in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDB91738599E008B18A9 /* All's Well That Ends Well.txt */; };
+		669BEDE517385D96008B18A9 /* William Blake.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDD117385D91008B18A9 /* William Blake.plist */; };
+		669BEDE617385D96008B18A9 /* Twelfth Night.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDD217385D91008B18A9 /* Twelfth Night.plist */; };
+		669BEDE717385D96008B18A9 /* Titus Andronicus.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDD317385D92008B18A9 /* Titus Andronicus.plist */; };
+		669BEDE817385D96008B18A9 /* The Winter's Tale.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDD417385D92008B18A9 /* The Winter's Tale.plist */; };
+		669BEDE917385D96008B18A9 /* The Tempest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDD517385D92008B18A9 /* The Tempest.plist */; };
+		669BEDEA17385D96008B18A9 /* The Taming of the Shrew.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDD617385D92008B18A9 /* The Taming of the Shrew.plist */; };
+		669BEDEB17385D96008B18A9 /* The Comedy of Errors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDD717385D92008B18A9 /* The Comedy of Errors.plist */; };
+		669BEDEC17385D96008B18A9 /* Rudyard Kipling.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDD817385D93008B18A9 /* Rudyard Kipling.plist */; };
+		669BEDED17385D96008B18A9 /* Romeo and Juliet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDD917385D93008B18A9 /* Romeo and Juliet.plist */; };
+		669BEDEE17385D96008B18A9 /* Phillis Wheatley.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDDA17385D93008B18A9 /* Phillis Wheatley.plist */; };
+		669BEDEF17385D96008B18A9 /* Much Ado About Nothing.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDDB17385D93008B18A9 /* Much Ado About Nothing.plist */; };
+		669BEDF017385D96008B18A9 /* Matthew Arnold.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDDC17385D93008B18A9 /* Matthew Arnold.plist */; };
+		669BEDF117385D96008B18A9 /* Lewis Carroll.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDDD17385D93008B18A9 /* Lewis Carroll.plist */; };
+		669BEDF217385D96008B18A9 /* King Lear.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDDE17385D94008B18A9 /* King Lear.plist */; };
+		669BEDF317385D96008B18A9 /* Julius Caesar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDDF17385D94008B18A9 /* Julius Caesar.plist */; };
+		669BEDF417385D96008B18A9 /* John Keats.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDE017385D94008B18A9 /* John Keats.plist */; };
+		669BEDF517385D96008B18A9 /* Henry Wadsworth.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDE117385D94008B18A9 /* Henry Wadsworth.plist */; };
+		669BEDF617385D96008B18A9 /* Elizabeth Browning.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDE217385D94008B18A9 /* Elizabeth Browning.plist */; };
+		669BEDF717385D96008B18A9 /* All's Well That Ends Well.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDE317385D95008B18A9 /* All's Well That Ends Well.plist */; };
+		669BEDF817385D96008B18A9 /* A Midsummer Night's Dream .plist in Resources */ = {isa = PBXBuildFile; fileRef = 669BEDE417385D96008B18A9 /* A Midsummer Night's Dream .plist */; };
+		66D8526D1739117B00AA22CD /* productDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D8526C1739117B00AA22CD /* productDescriptionViewController.m */; };
 		66DA142616E3227800C8FB53 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DA142516E3227800C8FB53 /* Default.png */; };
 		66DA142816E3228000C8FB53 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DA142716E3228000C8FB53 /* Default@2x.png */; };
 		66DA142A16E3228600C8FB53 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DA142916E3228600C8FB53 /* Default-568h@2x.png */; };
@@ -89,6 +137,58 @@
 		6667B15616E2563200EA782B /* bookDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bookDatabase.h; sourceTree = "<group>"; };
 		6667B15716E2563300EA782B /* bookDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bookDatabase.m; sourceTree = "<group>"; };
 		6667B16316E26B3E00EA782B /* Emily Dickinson.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Emily Dickinson.txt"; sourceTree = "<group>"; };
+		669BED901737EA0B008B18A9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		669BED921737EA83008B18A9 /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
+		669BED931737EA83008B18A9 /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
+		669BED951737EF01008B18A9 /* wordMushIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wordMushIAPHelper.h; sourceTree = "<group>"; };
+		669BED961737EF01008B18A9 /* wordMushIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wordMushIAPHelper.m; sourceTree = "<group>"; };
+		669BED9C1737FC0B008B18A9 /* IAPTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPTableView.h; sourceTree = "<group>"; };
+		669BED9D1737FC0B008B18A9 /* IAPTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPTableView.m; sourceTree = "<group>"; };
+		669BEDA317385999008B18A9 /* Lewis Carroll.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Lewis Carroll.txt"; sourceTree = "<group>"; };
+		669BEDA417385999008B18A9 /* Matthew Arnold.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Matthew Arnold.txt"; sourceTree = "<group>"; };
+		669BEDA517385999008B18A9 /* Phillis Wheatley.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Phillis Wheatley.txt"; sourceTree = "<group>"; };
+		669BEDA61738599A008B18A9 /* Henry Wadsworth.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Henry Wadsworth.txt"; sourceTree = "<group>"; };
+		669BEDA71738599A008B18A9 /* William Blake.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "William Blake.txt"; sourceTree = "<group>"; };
+		669BEDA81738599B008B18A9 /* Elizabeth Browning.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Elizabeth Browning.txt"; sourceTree = "<group>"; };
+		669BEDA91738599B008B18A9 /* John Keats.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "John Keats.txt"; sourceTree = "<group>"; };
+		669BEDAA1738599B008B18A9 /* Rudyard Kipling.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Rudyard Kipling.txt"; sourceTree = "<group>"; };
+		669BEDAB1738599C008B18A9 /* Othello.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Othello.txt; sourceTree = "<group>"; };
+		669BEDAC1738599C008B18A9 /* King Lear.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "King Lear.txt"; sourceTree = "<group>"; };
+		669BEDAD1738599C008B18A9 /* Macbeth.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Macbeth.txt; sourceTree = "<group>"; };
+		669BEDAE1738599C008B18A9 /* Julius Caesar.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Julius Caesar.txt"; sourceTree = "<group>"; };
+		669BEDAF1738599C008B18A9 /* Titus Andronicus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Titus Andronicus.txt"; sourceTree = "<group>"; };
+		669BEDB01738599C008B18A9 /* Coriolanus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Coriolanus.txt; sourceTree = "<group>"; };
+		669BEDB11738599D008B18A9 /* Romeo and Juliet.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Romeo and Juliet.txt"; sourceTree = "<group>"; };
+		669BEDB21738599D008B18A9 /* The Winter's Tale.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "The Winter's Tale.txt"; sourceTree = "<group>"; };
+		669BEDB31738599D008B18A9 /* Twelfth Night.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Twelfth Night.txt"; sourceTree = "<group>"; };
+		669BEDB41738599D008B18A9 /* The Tempest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "The Tempest.txt"; sourceTree = "<group>"; };
+		669BEDB51738599D008B18A9 /* The Taming of the Shrew.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "The Taming of the Shrew.txt"; sourceTree = "<group>"; };
+		669BEDB61738599D008B18A9 /* Much Ado About Nothing.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Much Ado About Nothing.txt"; sourceTree = "<group>"; };
+		669BEDB71738599D008B18A9 /* A Midsummer Night's Dream .txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "A Midsummer Night's Dream .txt"; sourceTree = "<group>"; };
+		669BEDB81738599E008B18A9 /* The Comedy of Errors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "The Comedy of Errors.txt"; sourceTree = "<group>"; };
+		669BEDB91738599E008B18A9 /* All's Well That Ends Well.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "All's Well That Ends Well.txt"; sourceTree = "<group>"; };
+		669BEDD117385D91008B18A9 /* William Blake.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "William Blake.plist"; sourceTree = "<group>"; };
+		669BEDD217385D91008B18A9 /* Twelfth Night.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Twelfth Night.plist"; sourceTree = "<group>"; };
+		669BEDD317385D92008B18A9 /* Titus Andronicus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Titus Andronicus.plist"; sourceTree = "<group>"; };
+		669BEDD417385D92008B18A9 /* The Winter's Tale.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "The Winter's Tale.plist"; sourceTree = "<group>"; };
+		669BEDD517385D92008B18A9 /* The Tempest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "The Tempest.plist"; sourceTree = "<group>"; };
+		669BEDD617385D92008B18A9 /* The Taming of the Shrew.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "The Taming of the Shrew.plist"; sourceTree = "<group>"; };
+		669BEDD717385D92008B18A9 /* The Comedy of Errors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "The Comedy of Errors.plist"; sourceTree = "<group>"; };
+		669BEDD817385D93008B18A9 /* Rudyard Kipling.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Rudyard Kipling.plist"; sourceTree = "<group>"; };
+		669BEDD917385D93008B18A9 /* Romeo and Juliet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Romeo and Juliet.plist"; sourceTree = "<group>"; };
+		669BEDDA17385D93008B18A9 /* Phillis Wheatley.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Phillis Wheatley.plist"; sourceTree = "<group>"; };
+		669BEDDB17385D93008B18A9 /* Much Ado About Nothing.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Much Ado About Nothing.plist"; sourceTree = "<group>"; };
+		669BEDDC17385D93008B18A9 /* Matthew Arnold.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Matthew Arnold.plist"; sourceTree = "<group>"; };
+		669BEDDD17385D93008B18A9 /* Lewis Carroll.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Lewis Carroll.plist"; sourceTree = "<group>"; };
+		669BEDDE17385D94008B18A9 /* King Lear.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "King Lear.plist"; sourceTree = "<group>"; };
+		669BEDDF17385D94008B18A9 /* Julius Caesar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Julius Caesar.plist"; sourceTree = "<group>"; };
+		669BEDE017385D94008B18A9 /* John Keats.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "John Keats.plist"; sourceTree = "<group>"; };
+		669BEDE117385D94008B18A9 /* Henry Wadsworth.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Henry Wadsworth.plist"; sourceTree = "<group>"; };
+		669BEDE217385D94008B18A9 /* Elizabeth Browning.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Elizabeth Browning.plist"; sourceTree = "<group>"; };
+		669BEDE317385D95008B18A9 /* All's Well That Ends Well.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "All's Well That Ends Well.plist"; sourceTree = "<group>"; };
+		669BEDE417385D96008B18A9 /* A Midsummer Night's Dream .plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "A Midsummer Night's Dream .plist"; sourceTree = "<group>"; };
+		66D8526B1739117B00AA22CD /* productDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = productDescriptionViewController.h; sourceTree = "<group>"; };
+		66D8526C1739117B00AA22CD /* productDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = productDescriptionViewController.m; sourceTree = "<group>"; };
 		66DA142516E3227800C8FB53 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		66DA142716E3228000C8FB53 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		66DA142916E3228600C8FB53 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -102,6 +202,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				669BED911737EA0B008B18A9 /* StoreKit.framework in Frameworks */,
 				66DA143416E3285000C8FB53 /* Social.framework in Frameworks */,
 				66DA143216E3284B00C8FB53 /* AdSupport.framework in Frameworks */,
 				66DA143016E3284000C8FB53 /* Accounts.framework in Frameworks */,
@@ -117,6 +218,7 @@
 		666778F916B5737500A32731 = {
 			isa = PBXGroup;
 			children = (
+				669BED901737EA0B008B18A9 /* StoreKit.framework */,
 				6654965116F7F5BF00C0C0CC /* regIcon.png */,
 				6654964F16F7F4D200C0C0CC /* retinaIcon.png */,
 				66DA143316E3285000C8FB53 /* Social.framework */,
@@ -155,6 +257,10 @@
 				6667791716B5737500A32731 /* wordMushAppDelegate.h */,
 				6667791816B5737500A32731 /* wordMushAppDelegate.m */,
 				6667792016B5737500A32731 /* MainStoryboard.storyboard */,
+				669BED9C1737FC0B008B18A9 /* IAPTableView.h */,
+				669BED9D1737FC0B008B18A9 /* IAPTableView.m */,
+				66D8526B1739117B00AA22CD /* productDescriptionViewController.h */,
+				66D8526C1739117B00AA22CD /* productDescriptionViewController.m */,
 				6667B15616E2563200EA782B /* bookDatabase.h */,
 				6667B15716E2563300EA782B /* bookDatabase.m */,
 				6667792D16B5794700A32731 /* randomTextViewController.h */,
@@ -164,6 +270,49 @@
 				6667793816B5834F00A32731 /* randomiserModel.h */,
 				6667793916B5834F00A32731 /* randomiserModel.m */,
 				660B563F17288E8300ED41D1 /* Edgar Allen Poe.plist */,
+				669BEDA317385999008B18A9 /* Lewis Carroll.txt */,
+				669BEDA417385999008B18A9 /* Matthew Arnold.txt */,
+				669BEDA517385999008B18A9 /* Phillis Wheatley.txt */,
+				669BEDA61738599A008B18A9 /* Henry Wadsworth.txt */,
+				669BEDA71738599A008B18A9 /* William Blake.txt */,
+				669BEDA81738599B008B18A9 /* Elizabeth Browning.txt */,
+				669BEDA91738599B008B18A9 /* John Keats.txt */,
+				669BEDAA1738599B008B18A9 /* Rudyard Kipling.txt */,
+				669BEDD117385D91008B18A9 /* William Blake.plist */,
+				669BEDD217385D91008B18A9 /* Twelfth Night.plist */,
+				669BEDD317385D92008B18A9 /* Titus Andronicus.plist */,
+				669BEDD417385D92008B18A9 /* The Winter's Tale.plist */,
+				669BEDD517385D92008B18A9 /* The Tempest.plist */,
+				669BEDD617385D92008B18A9 /* The Taming of the Shrew.plist */,
+				669BEDD717385D92008B18A9 /* The Comedy of Errors.plist */,
+				669BEDD817385D93008B18A9 /* Rudyard Kipling.plist */,
+				669BEDD917385D93008B18A9 /* Romeo and Juliet.plist */,
+				669BEDDA17385D93008B18A9 /* Phillis Wheatley.plist */,
+				669BEDDB17385D93008B18A9 /* Much Ado About Nothing.plist */,
+				669BEDDC17385D93008B18A9 /* Matthew Arnold.plist */,
+				669BEDDD17385D93008B18A9 /* Lewis Carroll.plist */,
+				669BEDDE17385D94008B18A9 /* King Lear.plist */,
+				669BEDDF17385D94008B18A9 /* Julius Caesar.plist */,
+				669BEDE017385D94008B18A9 /* John Keats.plist */,
+				669BEDE117385D94008B18A9 /* Henry Wadsworth.plist */,
+				669BEDE217385D94008B18A9 /* Elizabeth Browning.plist */,
+				669BEDE317385D95008B18A9 /* All's Well That Ends Well.plist */,
+				669BEDE417385D96008B18A9 /* A Midsummer Night's Dream .plist */,
+				669BEDAB1738599C008B18A9 /* Othello.txt */,
+				669BEDAC1738599C008B18A9 /* King Lear.txt */,
+				669BEDAD1738599C008B18A9 /* Macbeth.txt */,
+				669BEDAE1738599C008B18A9 /* Julius Caesar.txt */,
+				669BEDAF1738599C008B18A9 /* Titus Andronicus.txt */,
+				669BEDB01738599C008B18A9 /* Coriolanus.txt */,
+				669BEDB11738599D008B18A9 /* Romeo and Juliet.txt */,
+				669BEDB21738599D008B18A9 /* The Winter's Tale.txt */,
+				669BEDB31738599D008B18A9 /* Twelfth Night.txt */,
+				669BEDB41738599D008B18A9 /* The Tempest.txt */,
+				669BEDB51738599D008B18A9 /* The Taming of the Shrew.txt */,
+				669BEDB61738599D008B18A9 /* Much Ado About Nothing.txt */,
+				669BEDB71738599D008B18A9 /* A Midsummer Night's Dream .txt */,
+				669BEDB81738599E008B18A9 /* The Comedy of Errors.txt */,
+				669BEDB91738599E008B18A9 /* All's Well That Ends Well.txt */,
 				660B564017288E8300ED41D1 /* Emily Dickinson.plist */,
 				660B564117288E8300ED41D1 /* Oscar Wilde.plist */,
 				660B564217288E8300ED41D1 /* Pablo Neruda.plist */,
@@ -196,6 +345,10 @@
 				6667791A16B5737500A32731 /* Default.png */,
 				6667791C16B5737500A32731 /* Default@2x.png */,
 				6667791E16B5737500A32731 /* Default-568h@2x.png */,
+				669BED921737EA83008B18A9 /* IAPHelper.h */,
+				669BED931737EA83008B18A9 /* IAPHelper.m */,
+				669BED951737EF01008B18A9 /* wordMushIAPHelper.h */,
+				669BED961737EF01008B18A9 /* wordMushIAPHelper.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -277,6 +430,49 @@
 				660B564C17288E8300ED41D1 /* Robert Frost.plist in Resources */,
 				660B564D17288E8300ED41D1 /* Thomas Hardy.plist in Resources */,
 				660B564E17288E8300ED41D1 /* Walt Whitman.plist in Resources */,
+				669BEDBA1738599E008B18A9 /* Lewis Carroll.txt in Resources */,
+				669BEDBB1738599E008B18A9 /* Matthew Arnold.txt in Resources */,
+				669BEDBC1738599E008B18A9 /* Phillis Wheatley.txt in Resources */,
+				669BEDBD1738599E008B18A9 /* Henry Wadsworth.txt in Resources */,
+				669BEDBE1738599E008B18A9 /* William Blake.txt in Resources */,
+				669BEDBF1738599E008B18A9 /* Elizabeth Browning.txt in Resources */,
+				669BEDC01738599E008B18A9 /* John Keats.txt in Resources */,
+				669BEDC11738599E008B18A9 /* Rudyard Kipling.txt in Resources */,
+				669BEDC21738599E008B18A9 /* Othello.txt in Resources */,
+				669BEDC31738599E008B18A9 /* King Lear.txt in Resources */,
+				669BEDC41738599E008B18A9 /* Macbeth.txt in Resources */,
+				669BEDC51738599E008B18A9 /* Julius Caesar.txt in Resources */,
+				669BEDC61738599E008B18A9 /* Titus Andronicus.txt in Resources */,
+				669BEDC71738599E008B18A9 /* Coriolanus.txt in Resources */,
+				669BEDC81738599E008B18A9 /* Romeo and Juliet.txt in Resources */,
+				669BEDC91738599E008B18A9 /* The Winter's Tale.txt in Resources */,
+				669BEDCA1738599E008B18A9 /* Twelfth Night.txt in Resources */,
+				669BEDCB1738599E008B18A9 /* The Tempest.txt in Resources */,
+				669BEDCC1738599E008B18A9 /* The Taming of the Shrew.txt in Resources */,
+				669BEDCD1738599E008B18A9 /* Much Ado About Nothing.txt in Resources */,
+				669BEDCE1738599E008B18A9 /* A Midsummer Night's Dream .txt in Resources */,
+				669BEDCF1738599E008B18A9 /* The Comedy of Errors.txt in Resources */,
+				669BEDD01738599E008B18A9 /* All's Well That Ends Well.txt in Resources */,
+				669BEDE517385D96008B18A9 /* William Blake.plist in Resources */,
+				669BEDE617385D96008B18A9 /* Twelfth Night.plist in Resources */,
+				669BEDE717385D96008B18A9 /* Titus Andronicus.plist in Resources */,
+				669BEDE817385D96008B18A9 /* The Winter's Tale.plist in Resources */,
+				669BEDE917385D96008B18A9 /* The Tempest.plist in Resources */,
+				669BEDEA17385D96008B18A9 /* The Taming of the Shrew.plist in Resources */,
+				669BEDEB17385D96008B18A9 /* The Comedy of Errors.plist in Resources */,
+				669BEDEC17385D96008B18A9 /* Rudyard Kipling.plist in Resources */,
+				669BEDED17385D96008B18A9 /* Romeo and Juliet.plist in Resources */,
+				669BEDEE17385D96008B18A9 /* Phillis Wheatley.plist in Resources */,
+				669BEDEF17385D96008B18A9 /* Much Ado About Nothing.plist in Resources */,
+				669BEDF017385D96008B18A9 /* Matthew Arnold.plist in Resources */,
+				669BEDF117385D96008B18A9 /* Lewis Carroll.plist in Resources */,
+				669BEDF217385D96008B18A9 /* King Lear.plist in Resources */,
+				669BEDF317385D96008B18A9 /* Julius Caesar.plist in Resources */,
+				669BEDF417385D96008B18A9 /* John Keats.plist in Resources */,
+				669BEDF517385D96008B18A9 /* Henry Wadsworth.plist in Resources */,
+				669BEDF617385D96008B18A9 /* Elizabeth Browning.plist in Resources */,
+				669BEDF717385D96008B18A9 /* All's Well That Ends Well.plist in Resources */,
+				669BEDF817385D96008B18A9 /* A Midsummer Night's Dream .plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +489,10 @@
 				6667792F16B5794700A32731 /* randomTextViewController.m in Sources */,
 				6667793A16B5834F00A32731 /* randomiserModel.m in Sources */,
 				6667B15816E2563300EA782B /* bookDatabase.m in Sources */,
+				669BED941737EA83008B18A9 /* IAPHelper.m in Sources */,
+				669BED971737EF01008B18A9 /* wordMushIAPHelper.m in Sources */,
+				669BED9E1737FC0B008B18A9 /* IAPTableView.m in Sources */,
+				66D8526D1739117B00AA22CD /* productDescriptionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

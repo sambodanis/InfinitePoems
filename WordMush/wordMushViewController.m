@@ -29,6 +29,7 @@
 @end
 
 @implementation wordMushViewController
+
 @synthesize book = _book;
 @synthesize allBooks = _allBooks;
 @synthesize bookListPicker = _bookListPicker;
@@ -40,6 +41,7 @@
 - (NSArray *)listOfAuthors {
     if (!_listOfAuthors) {
         _listOfAuthors = [self.allBooks getAuthorList];
+//        _listOfAuthors = [[NSArray alloc] init];
     }
     return _listOfAuthors;
 }
@@ -88,11 +90,10 @@
     }
 }
 
-
 - (IBAction)CreatePoemFromAuthor:(UIButton *)sender {
     
-    self.book = [self.allBooks getBook:self.selectedAuthorOne];
-    self.book = [self.book stringByAppendingString:[self.allBooks getBook:self.selectedAuthorTwo]];
+//    self.book = [self.allBooks getBook:self.selectedAuthorOne];
+//    self.book = [self.book stringByAppendingString:[self.allBooks getBook:self.selectedAuthorTwo]];
 }
 
 - (IBAction)createPoemFromLeftAuthor:(UIButton *)sender {
@@ -102,7 +103,6 @@
 - (IBAction)createPoemFromRightAuthor:(UIButton *)sender {
     self.book = [self.allBooks getBook:self.selectedAuthorTwo];
 }
-
 
 #pragma pickerViewMethods
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
@@ -121,16 +121,13 @@
     if (component == 0) {
         self.selectedAuthorOne = [self.listOfAuthors objectAtIndex:row];
         [self.leftPoemButton setTitle:self.selectedAuthorOne forState:UIControlStateNormal];
-//        NSLog(@"%d, %@", row, self.selectedAuthorOne);
         [pickerView selectRow:row inComponent:0 animated:YES];
     } else if (component == 1) {
         self.selectedAuthorTwo = [self.listOfAuthors objectAtIndex:row];        
         [self.rightPoemButton setTitle:self.selectedAuthorTwo forState:UIControlStateNormal];
-//        NSLog(@"%d, %@", row, self.selectedAuthorTwo);
         [pickerView selectRow:row inComponent:1 animated:YES];
     }
     [self.CreatePoemButton setTitle:[self.selectedAuthorOne stringByAppendingFormat:@" + %@", self.selectedAuthorTwo] forState:UIControlStateNormal];
-//    NSLog(@"%@", [self.selectedAuthorOne stringByAppendingFormat:@" + %@", self.selectedAuthorTwo]);
 }
 
 
@@ -138,6 +135,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+//    self.listOfAuthors = [self.allBooks getAuthorList];
     self.bookListPicker = [[UIPickerView alloc] init];
     self.bookListPicker.delegate = self;
     self.bookListPicker.dataSource = self;
@@ -147,13 +145,8 @@
     [self.leftPoemButton setTitle:self.selectedAuthorOne forState:UIControlStateNormal];
     [self.rightPoemButton setTitle:self.selectedAuthorTwo forState:UIControlStateNormal];
     [self.CreatePoemButton setTitle:[self.selectedAuthorOne stringByAppendingFormat:@" + %@", self.selectedAuthorTwo] forState:UIControlStateNormal];
-//    self.rightPoemButton.hidden = TRUE;
+    
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

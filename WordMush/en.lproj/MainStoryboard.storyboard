@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tky-Co-llc">
-                                <rect key="frame" x="20" y="318" width="280" height="79"/>
+                                <rect key="frame" x="20" y="293" width="280" height="65"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Tom Sawyer">
@@ -37,7 +37,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jup-Ew-r3N">
-                                <rect key="frame" x="20" y="247" width="139" height="64"/>
+                                <rect key="frame" x="20" y="231" width="140" height="61"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button">
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FaH-a4-0uL">
-                                <rect key="frame" x="161" y="247" width="139" height="64"/>
+                                <rect key="frame" x="161" y="231" width="140" height="61"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button">
@@ -72,6 +72,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="gwi-FP-TLK">
+                        <barButtonItem key="leftBarButtonItem" title="Get more poems" id="5dq-P9-uEO">
+                            <connections>
+                                <segue destination="uVe-bv-RPf" kind="push" identifier="IAPSegue" id="fWC-1J-UL1"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Help" id="Muz-TI-MgY">
                             <connections>
                                 <segue destination="ddc-xw-0cb" kind="push" id="8hl-i6-6ci"/>
@@ -88,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="657" y="76"/>
+            <point key="canvasLocation" x="1183" y="76"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nye-1v-hfj">
@@ -110,7 +115,69 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWM-9J-wEr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1288" y="251"/>
+            <point key="canvasLocation" x="1814" y="251"/>
+        </scene>
+        <!--Table View - Item-->
+        <scene sceneID="EpW-kU-HDh">
+            <objects>
+                <tableViewController id="uVe-bv-RPf" customClass="IAPTableView" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="IfR-u7-h5N">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductCell" id="co4-fc-uP4">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="6M3-qj-6VD" kind="push" identifier="productDescriptionSegue" id="DXZ-bN-JTs"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uVe-bv-RPf" id="G7D-Nj-yTu"/>
+                            <outlet property="delegate" destination="uVe-bv-RPf" id="aki-0u-ukb"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="9sZ-tV-WbZ"/>
+                    <navigationItem key="navigationItem" id="EEl-dE-9Lh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iue-Fx-fv6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1576" y="-513"/>
+        </scene>
+        <!--Product Description View Controller-->
+        <scene sceneID="1Mv-ik-83b">
+            <objects>
+                <viewController id="6M3-qj-6VD" customClass="productDescriptionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b46-xE-tHa">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="sG6-r3-zGQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AIt-hG-zcv"/>
+                    <connections>
+                        <outlet property="scrollableTextView" destination="sG6-r3-zGQ" id="TOL-n6-EBm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y7L-pp-1MW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2036" y="-513"/>
         </scene>
         <!--Random Text View Controller-->
         <scene sceneID="6rs-6f-Gc4">
@@ -152,12 +219,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PEg-uH-xDC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1154" y="76"/>
+            <point key="canvasLocation" x="1680" y="76"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Controller - Item-->
         <scene sceneID="dh6-uu-jyy">
             <objects>
                 <navigationController id="R0R-2I-jdJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="IZj-Nz-Mhr"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="1Jc-fD-1Ze"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gVx-j3-CVN">
@@ -171,13 +239,44 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Yk-fC-iWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64" y="17"/>
+            <point key="canvasLocation" x="744" y="99"/>
         </scene>
     </scenes>
     <resources>
         <image name="paperBackground.jpg" width="4000" height="3070"/>
         <image name="splashScreen.png" width="745" height="1053"/>
     </resources>
+    <classes>
+        <class className="IAPTableView" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IAPTableView.h"/>
+        </class>
+        <class className="productDescriptionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/productDescriptionViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scrollableTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="randomTextViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/randomTextViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="postToFacebook:"/>
+                <relationship kind="outlet" name="randomTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
+            </relationships>
+        </class>
+        <class className="wordMushViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/wordMushViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="CreatePoemFromAuthor:" candidateClass="UIButton"/>
+                <relationship kind="action" name="createPoemFromLeftAuthor:" candidateClass="UIButton"/>
+                <relationship kind="action" name="createPoemFromRightAuthor:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="CreatePoemButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="bookListPicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="leftPoemButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="rightPoemButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
